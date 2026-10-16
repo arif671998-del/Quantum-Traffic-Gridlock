@@ -7,7 +7,7 @@ verified. This page declares all AI assistance in this submission. The detailed,
 
 | tool | what it did |
 |---|---|
-| **Claude (Claude app)** | Explained the problem statement and the quantum concepts to the team (all three of us are beginners in quantum computing); built the numpy prototype in `research/` that compared QUBO surrogates and QAOA training variants; wrote `traffic_qubo.py` (queue recursion, causal windows, local quadratic projection, QUBO and Ising conversion) and the project brief `CLAUDE.md`; typesets the PDF versions of the report and this disclosure. |
+| **Claude (Claude app)** | Explained the problem statement and the quantum concepts to the team (all three of us are beginners in quantum computing); built the numpy prototype in `research/` that compared QUBO surrogates and QAOA training variants; wrote `traffic_qubo.py` (queue recursion, causal windows, local quadratic projection, QUBO and Ising conversion) and the project brief `CLAUDE.md`; reviewed our `metrics.json` with us and diagnosed the wrong ramp sign (section 3); typesets the PDF versions of the report and this disclosure. |
 | **Claude Code** (model: Claude Sonnet 5.5) | Wrote the tests (`tests/`), `qaoa.py`, `baselines.py`, `run.py`, `scenario_gen.py`, `ablations.py`, `generalisation.py`, `report_numbers.py` and `make_outputs.sh`; ran them in our repository; drafted `README.md` and `REPORT.md` from the files in `outputs/` and `logs/`. |
 
 No other AI tool was used. Libraries used (permitted): Qiskit, NumPy, SciPy.
@@ -19,10 +19,14 @@ No other AI tool was used. Libraries used (permitted): Qiskit, NumPy, SciPy.
   rises by ≥ 0.02 without lowering the minimum lift; R and H are never used to choose settings).
 - Ran every test and experiment on our own machine and looked at the outputs.
 - Checked the generated schedules with the official `scorer.py`.
-- Followed the organisers' Discord announcements about scenario H (released late, about 17:40 IST on 16 Oct), reviewed `metrics.json` and spotted that the initial objective was above the random level, which led to the sign correction of the mixer angle (Claude Code then measured it with the pre-set rule, implemented it and reran everything).
+- Followed the organisers' Discord announcements about scenario H (released late, about 17:40 IST on 16 Oct), reviewed the sign-correction evidence with Claude and **approved the change** (see section 3).
 - Reviewed the report against the logs before submission.
 
-## 3. How results were verified independently of the AI-written code
+## 3. Late sign error in the QAOA ramp (found by AI review, fixed with team approval)
+
+Claude (Claude app) noticed initial_objective = +1.45 in metrics.json during review and diagnosed the ramp sign; Claude Code verified it with an ablation and implemented the fix; the team approved the change. The change was judged by the same selection rule fixed in advance (30 random scenarios only); the earlier wrong-sign results were kept in the ablation logs as a separate "before the sign fix" block, and the depth, random-angle, surrogate and CVaR ablations were rerun on the corrected ramp.
+
+## 4. How results were verified independently of the AI-written code
 
 - **Official scorer:** the four reference vectors (116.0, 146.0, 237.0, 92.5) are a unit test; every cost in the report is
   computed by `official/scorer.py`; `scorer.py --schedule outputs/R/seed0/schedule.json` runs on our `schedule.json`.
@@ -36,7 +40,7 @@ No other AI tool was used. Libraries used (permitted): Qiskit, NumPy, SciPy.
   `make_outputs.sh` changes only the `runtime_seconds` field of `metrics.json`.
 - **Report numbers** are produced by scripts into `outputs/` and `logs/`, not typed from memory.
 
-## 4. Integrity statements
+## 5. Integrity statements
 
 - The QUBO comes from a documented, scenario-independent traffic rule (local terms over causal windows, best quadratic
   approximation per term, exact switching term). It was **never** built from enumeration, from the optimal schedule or from

@@ -40,6 +40,12 @@ def configs():
     # Added after the first study (16 Oct, ~17:45): same magnitudes as the adopted (1.0, 0.4) but beta negative, because
     # RX(2 beta) = exp(-i beta X) needs the opposite sign to gamma to start an annealing-like ramp on the low-energy side.
     c["init ramp gamma 1.0 / beta -0.4 (sign-corrected)"] = dict(group="sign", p=4, init=("ramp", 1.0, -0.4), degree=2, cvar=None)
+    # Main ablation block on the ADOPTED ramp (1.0, -0.4) (added 16 Oct, after the sign fix). The old rows below stay as the
+    # "before the sign fix" block. Random-angle starts do not depend on the ramp, so they serve both blocks unchanged.
+    for p in (1, 2, 3):
+        c[f"[adopted ramp] depth p={p}"] = dict(group="a_depth", p=p, init=("ramp", 1.0, -0.4), degree=2, cvar=None)
+    c["[adopted ramp] surrogate degree 1 (linear only)"] = dict(group="a_surrogate", p=4, init=("ramp", 1.0, -0.4), degree=1, cvar=None)
+    c["[adopted ramp] objective CVaR 0.25"] = dict(group="a_objective", p=4, init=("ramp", 1.0, -0.4), degree=2, cvar=0.25)
     c["surrogate degree 1 (linear only)"] = dict(group="surrogate", p=4, init=("ramp", 0.6, 0.6), degree=1, cvar=None)
     c["objective CVaR 0.25"] = dict(group="objective", p=4, init=("ramp", 0.6, 0.6), degree=2, cvar=0.25)
     return c
@@ -127,16 +133,30 @@ def main():
          f"C_rand - C* < {MIN_DENOM}) + scenario R. Lift/enrichment from 4,096 sampled shots, seed 0. Regret = (official cost of "
          "the QUBO minimiser - C*) / C* in %.", ""]
     head = "| setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | mean initial objective | R lift | R enrichment |\n|---|---|---|---|---|---|---|---|---|---|"
-    for title, groups in [("Depth", ("baseline", "depth")), ("Initialisation (random angles)", ("baseline", "init")),
-                          ("Initialisation (ramp scales)", ("baseline", "scale")), ("Ramp sign (added later)", ("baseline", "sign")), ("Surrogate degree", ("baseline", "surrogate")),
-                          ("Objective", ("baseline", "objective"))]:
-        L += [f"## {title}", "", head]
-        for n, s in summary.items():
-            if s["group"] in groups or (title.startswith("Ramp sign") and n == "init ramp gamma 1.0 / beta 0.4"):
-                a, r = s["random30"], s["R"]
-                L.append(f"| {n} | {a['lift_mean']:.3f} | {a['lift_min']:.3f} | {a['enrichment_mean']:.2f} | {a['regret_mean_pct']:.2f} | "
-                         f"{a['regret_share_le_5pct']:.2f} | {a['evals_max']} | {a['initial_objective_mean']:.2f} | {r['lift']:.3f} | {r['enrichment']:.2f} |")
+    ADOPT = "init ramp gamma 1.0 / beta -0.4 (sign-corrected)"
+    OLDDEF = "init ramp gamma 1.0 / beta 0.4"
+
+    def block(title, names, level="##"):
+        L.extend([f"{level} {title}", "", head])
+        for n in names:
+            a, r = summary[n]["random30"], summary[n]["R"]
+            L.append(f"| {n} | {a['lift_mean']:.3f} | {a['lift_min']:.3f} | {a['enrichment_mean']:.2f} | {a['regret_mean_pct']:.2f} | "
+                     f"{a['regret_share_le_5pct']:.2f} | {a['evals_max']} | {a['initial_objective_mean']:.2f} | {r['lift']:.3f} | {r['enrichment']:.2f} |")
         L.append("")
+
+    def grp(*g):
+        return [n for n, s in summary.items() if s["group"] in g]
+
+    L += ["# Main ablations: adopted ramp (gamma 1.0, beta -0.4)", ""]
+    block("Depth", [ADOPT] + grp("a_depth"), "###")
+    block("Initialisation: adopted ramp vs random angles", [ADOPT] + grp("init"), "###")
+    block("Surrogate degree", [ADOPT] + grp("a_surrogate"), "###")
+    block("Objective", [ADOPT] + grp("a_objective"), "###")
+    L += ["# Before the sign fix (beta of the same sign as gamma: starts ABOVE the random energy level)", ""]
+    block("Old default and old initial setting", grp("baseline") + [OLDDEF], "###")
+    block("Old depth rows (ramp 0.6/0.6)", grp("baseline", "depth"), "###")
+    block("Old ramp-scale grid", grp("baseline", "scale"), "###")
+    block("Old surrogate / objective rows (ramp 0.6/0.6)", grp("baseline", "surrogate", "objective"), "###")
     L += ["## Decision", "", f"Rule: {decision['rule']}.", f"Baseline (initial default): mean {decision['baseline_mean_lift']:.3f}, min {decision['baseline_min_lift']:.3f}.",
           f"Qualifying settings: {decision['qualifying'] or 'none'}.  **Chosen: {decision['chosen']}.**", "",
           "### Second decision: sign correction", "", f"Rule: {decision['second_rule_sign_correction']['rule']}.",

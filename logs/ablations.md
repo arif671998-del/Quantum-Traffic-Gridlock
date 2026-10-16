@@ -2,7 +2,50 @@
 
 30 random scenarios (seed 2026; none excluded for C_rand - C* < 1.0) + scenario R. Lift/enrichment from 4,096 sampled shots, seed 0. Regret = (official cost of the QUBO minimiser - C*) / C* in %.
 
-## Depth
+# Main ablations: adopted ramp (gamma 1.0, beta -0.4)
+
+### Depth
+
+| setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | mean initial objective | R lift | R enrichment |
+|---|---|---|---|---|---|---|---|---|---|
+| init ramp gamma 1.0 / beta -0.4 (sign-corrected) | 0.820 | 0.698 | 12.54 | 1.77 | 0.87 | 300 | -0.96 | 0.781 | 11.67 |
+| [adopted ramp] depth p=1 | 0.563 | 0.421 | 5.29 | 1.77 | 0.87 | 83 | -0.43 | 0.620 | 6.36 |
+| [adopted ramp] depth p=2 | 0.701 | 0.566 | 8.70 | 1.77 | 0.87 | 300 | -0.60 | 0.734 | 10.00 |
+| [adopted ramp] depth p=3 | 0.782 | 0.645 | 11.26 | 1.77 | 0.87 | 300 | -0.80 | 0.767 | 11.12 |
+
+### Initialisation: adopted ramp vs random angles
+
+| setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | mean initial objective | R lift | R enrichment |
+|---|---|---|---|---|---|---|---|---|---|
+| init ramp gamma 1.0 / beta -0.4 (sign-corrected) | 0.820 | 0.698 | 12.54 | 1.77 | 0.87 | 300 | -0.96 | 0.781 | 11.67 |
+| init random angles U(0,1), seed 1 | 0.622 | 0.096 | 7.75 | 1.77 | 0.87 | 300 | 0.85 | 0.663 | 7.18 |
+| init random angles U(0,1), seed 2 | 0.741 | 0.547 | 9.72 | 1.77 | 0.87 | 300 | 1.36 | 0.738 | 9.91 |
+| init random angles U(0,1), seed 3 | 0.686 | 0.305 | 8.23 | 1.77 | 0.87 | 300 | 2.04 | 0.729 | 9.86 |
+
+### Surrogate degree
+
+| setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | mean initial objective | R lift | R enrichment |
+|---|---|---|---|---|---|---|---|---|---|
+| init ramp gamma 1.0 / beta -0.4 (sign-corrected) | 0.820 | 0.698 | 12.54 | 1.77 | 0.87 | 300 | -0.96 | 0.781 | 11.67 |
+| [adopted ramp] surrogate degree 1 (linear only) | 0.418 | -0.894 | 4.91 | 41.69 | 0.13 | 300 | -1.18 | 0.451 | 1.48 |
+
+### Objective
+
+| setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | mean initial objective | R lift | R enrichment |
+|---|---|---|---|---|---|---|---|---|---|
+| init ramp gamma 1.0 / beta -0.4 (sign-corrected) | 0.820 | 0.698 | 12.54 | 1.77 | 0.87 | 300 | -0.96 | 0.781 | 11.67 |
+| [adopted ramp] objective CVaR 0.25 | 0.769 | 0.536 | 12.43 | 1.77 | 0.87 | 300 | -1.53 | 0.774 | 11.79 |
+
+# Before the sign fix (beta of the same sign as gamma: starts ABOVE the random energy level)
+
+### Old default and old initial setting
+
+| setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | mean initial objective | R lift | R enrichment |
+|---|---|---|---|---|---|---|---|---|---|
+| baseline (p=4, ramp 0.6/0.6, degree 2, mean) | 0.734 | 0.591 | 9.33 | 1.77 | 0.87 | 300 | 1.19 | 0.740 | 10.23 |
+| init ramp gamma 1.0 / beta 0.4 | 0.773 | 0.642 | 10.74 | 1.77 | 0.87 | 300 | 1.39 | 0.740 | 10.19 |
+
+### Old depth rows (ramp 0.6/0.6)
 
 | setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | mean initial objective | R lift | R enrichment |
 |---|---|---|---|---|---|---|---|---|---|
@@ -11,16 +54,7 @@
 | depth p=2 | 0.665 | 0.524 | 7.33 | 1.77 | 0.87 | 300 | 0.63 | 0.688 | 8.75 |
 | depth p=3 | 0.719 | 0.535 | 8.87 | 1.77 | 0.87 | 300 | 0.90 | 0.688 | 8.72 |
 
-## Initialisation (random angles)
-
-| setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | mean initial objective | R lift | R enrichment |
-|---|---|---|---|---|---|---|---|---|---|
-| baseline (p=4, ramp 0.6/0.6, degree 2, mean) | 0.734 | 0.591 | 9.33 | 1.77 | 0.87 | 300 | 1.19 | 0.740 | 10.23 |
-| init random angles U(0,1), seed 1 | 0.622 | 0.096 | 7.75 | 1.77 | 0.87 | 300 | 0.85 | 0.663 | 7.18 |
-| init random angles U(0,1), seed 2 | 0.741 | 0.547 | 9.72 | 1.77 | 0.87 | 300 | 1.36 | 0.738 | 9.91 |
-| init random angles U(0,1), seed 3 | 0.686 | 0.305 | 8.23 | 1.77 | 0.87 | 300 | 2.04 | 0.729 | 9.86 |
-
-## Initialisation (ramp scales)
+### Old ramp-scale grid
 
 | setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | mean initial objective | R lift | R enrichment |
 |---|---|---|---|---|---|---|---|---|---|
@@ -37,26 +71,12 @@
 | init ramp gamma 1.0 / beta 0.6 | 0.765 | 0.615 | 10.33 | 1.77 | 0.87 | 300 | 1.74 | 0.747 | 10.45 |
 | init ramp gamma 1.0 / beta 0.8 | 0.745 | 0.590 | 9.67 | 1.77 | 0.87 | 300 | 1.91 | 0.688 | 8.70 |
 
-## Ramp sign (added later)
-
-| setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | mean initial objective | R lift | R enrichment |
-|---|---|---|---|---|---|---|---|---|---|
-| baseline (p=4, ramp 0.6/0.6, degree 2, mean) | 0.734 | 0.591 | 9.33 | 1.77 | 0.87 | 300 | 1.19 | 0.740 | 10.23 |
-| init ramp gamma 1.0 / beta 0.4 | 0.773 | 0.642 | 10.74 | 1.77 | 0.87 | 300 | 1.39 | 0.740 | 10.19 |
-| init ramp gamma 1.0 / beta -0.4 (sign-corrected) | 0.820 | 0.698 | 12.54 | 1.77 | 0.87 | 300 | -0.96 | 0.781 | 11.67 |
-
-## Surrogate degree
+### Old surrogate / objective rows (ramp 0.6/0.6)
 
 | setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | mean initial objective | R lift | R enrichment |
 |---|---|---|---|---|---|---|---|---|---|
 | baseline (p=4, ramp 0.6/0.6, degree 2, mean) | 0.734 | 0.591 | 9.33 | 1.77 | 0.87 | 300 | 1.19 | 0.740 | 10.23 |
 | surrogate degree 1 (linear only) | 0.440 | -0.622 | 4.97 | 41.69 | 0.13 | 300 | 1.01 | 0.557 | 4.56 |
-
-## Objective
-
-| setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | mean initial objective | R lift | R enrichment |
-|---|---|---|---|---|---|---|---|---|---|
-| baseline (p=4, ramp 0.6/0.6, degree 2, mean) | 0.734 | 0.591 | 9.33 | 1.77 | 0.87 | 300 | 1.19 | 0.740 | 10.23 |
 | objective CVaR 0.25 | 0.692 | 0.526 | 10.17 | 1.77 | 0.87 | 300 | -0.34 | 0.763 | 11.48 |
 
 ## Decision

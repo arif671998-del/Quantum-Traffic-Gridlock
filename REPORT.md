@@ -59,21 +59,29 @@ On H the raw QAOA best sample is the QUBO's minimiser (236.0), not the true opti
 
 ## 5. Ablations
 
-Each setting was run on 30 random scenarios (seed 2026) and R (`logs/ablations.md`); lift and enrichment from 4,096 sampled shots (seed 0). **Rows other than the last two were run with the old positive-β ramp** (their start energy is above the random level), so only the last two rows are on the corrected footing.
+Each setting was run on 30 random scenarios (seed 2026) and R (`logs/ablations.md`); lift and enrichment from 4,096 sampled shots (seed 0). All rows below use the **adopted ramp (1.0, −0.4)** except where stated; the random-angle rows do not depend on the ramp.
 
 | setting | mean lift | min lift | mean enrichment | mean regret % | R lift |
 |---|---|---|---|---|---|
-| p = 1 (ramp 0.6, +0.6) | 0.563 | 0.421 | 5.29 | 1.77 | 0.620 |
-| p = 2 (ramp 0.6, +0.6) | 0.665 | 0.524 | 7.33 | 1.77 | 0.688 |
-| p = 3 (ramp 0.6, +0.6) | 0.719 | 0.535 | 8.87 | 1.77 | 0.688 |
-| p = 4 (ramp 0.6, +0.6) | 0.734 | 0.591 | 9.33 | 1.77 | 0.740 |
-| p = 4, random angles U(0,1), 3 fixed seeds | 0.622 / 0.741 / 0.686 | 0.096 / 0.547 / 0.305 | 7.75 / 9.72 / 8.23 | 1.77 | 0.663 / 0.738 / 0.729 |
-| surrogate degree 1 (linear only; ramp 0.6, +0.6) | 0.440 | −0.622 | 4.97 | 41.69 | 0.557 |
-| objective CVaR 0.25 (ramp 0.6, +0.6) | 0.692 | 0.526 | 10.17 | 1.77 | 0.763 |
-| p = 4, ramp (1.0, **+0.4**) — previous default, wrong sign | 0.773 | 0.642 | 10.74 | 1.77 | 0.740 |
-| p = 4, ramp (1.0, **−0.4**) — **adopted** | **0.820** | **0.698** | **12.54** | 1.77 | **0.781** |
+| p = 1 | 0.563 | 0.421 | 5.29 | 1.77 | 0.620 |
+| p = 2 | 0.701 | 0.566 | 8.70 | 1.77 | 0.734 |
+| p = 3 | 0.782 | 0.645 | 11.26 | 1.77 | 0.767 |
+| **p = 4 (adopted)** | 0.820 | 0.698 | 12.54 | 1.77 | 0.781 |
+| p = 4, random angles U(0,1), seeds 1 / 2 / 3 | 0.622 / 0.741 / 0.686 | 0.096 / 0.547 / 0.305 | 7.75 / 9.72 / 8.23 | 1.77 / 1.77 / 1.77 | 0.663 / 0.738 / 0.729 |
+| surrogate degree 1 (linear only) | 0.418 | -0.894 | 4.91 | 41.69 | 0.451 |
+| objective CVaR 0.25 | 0.769 | 0.536 | 12.43 | 1.77 | 0.774 |
 
-Lift grows with depth (old ramp). The quadratic terms are essential: the linear-only surrogate has 41.7 % mean regret and its lift can be negative. CVaR gives higher enrichment but lower mean and minimum lift than the mean-energy objective. All three random starts have a lower minimum lift than the old ramp (0.10–0.55 versus 0.59). The depth, random-angle and CVaR comparisons were not repeated on the corrected ramp; their ordering may change. There are no free constraint-penalty weights (all schedules are valid; the overflow weight is a scenario parameter), so the surrogate-degree ablation is the model-side counterpart.
+Lift rises with depth at every step. The quadratic terms are essential: the linear-only surrogate has 41.7 % mean regret and its lift can be negative. Mean-energy training beats CVaR on mean and minimum lift; enrichment is about equal. Every random start is worse than the ramp in mean and minimum lift (minimum 0.10–0.55 versus 0.70). There are no free constraint-penalty weights (all schedules are valid; the overflow weight is a scenario parameter), so the surrogate-degree ablation is the model-side counterpart.
+
+**Before the sign fix** (β with the same sign as γ, starting above the random energy level; rows kept for the record and for the selection rules in section 3):
+
+| setting | mean lift | min lift | mean enrichment | mean initial objective | R lift |
+|---|---|---|---|---|---|
+| p = 4, ramp (0.6, +0.6) | 0.734 | 0.591 | 9.33 | +1.19 | 0.740 |
+| p = 4, ramp (1.0, +0.4) | 0.773 | 0.642 | 10.74 | +1.39 | 0.740 |
+| p = 4, ramp (1.0, −0.4), for comparison | 0.820 | 0.698 | 12.54 | -0.96 | 0.781 |
+
+Other old-sign rows (ramp 0.6, +0.6; mean lift): p = 1 / 2 / 3 = 0.563 / 0.665 / 0.719; CVaR 0.25 = 0.692; degree 1 = 0.440. The ordering of depth, objective and surrogate conclusions is the same in both blocks, but the corrected ramp is better throughout.
 
 ## 6. Generalisation
 
@@ -98,7 +106,7 @@ The sign fix is not uniformly better: heldout_2 got worse (min lift 0.844 → 0.
 
 ## 7. Limitations
 
-- We shipped the wrong-sign ramp until a late review of `initial_objective`; a regression test now requires the starting energy to be below the random level. The earlier ablation rows were not rerun with the corrected sign.
+- We shipped the wrong-sign ramp until a late review of `initial_objective`; a regression test now requires the starting energy to be below the random level. The ablations were rerun on the corrected ramp; the old-sign rows are kept separately.
 - COBYLA uses the whole 300-evaluation budget on every p = 4 run, so the angles are not converged.
 - The quadratic surrogate fails on some scenarios: regret up to 32.6 % (10 of 100 scenarios exceed 5 %); on H it costs 2.0 units (0.86 %) and caps the raw best sample at 236.0. Higher-order terms or auxiliary variables were not built.
 - The ramp choices were made sequentially on the same 30 scenarios, so part of the gain is likely selection noise; the independent 100-scenario set (0.782 → 0.818) and R (0.739 → 0.781 mean lift) point the same way, but heldout_2 worsened.
