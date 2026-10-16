@@ -75,25 +75,34 @@ def energy_table(h, J, sigma):
     return e
 
 
-def initial_angles(p=P):
-    """Linear ramp: gamma_k = 0.6 (k-0.5)/p rising, beta_k = 0.6 (1-(k-0.5)/p) falling, k=1..p."""
+def initial_angles(p=P, gamma_scale=0.6, beta_scale=0.6):
+    """Linear ramp: gamma_k = gamma_scale (k-0.5)/p rising, beta_k = beta_scale (1-(k-0.5)/p) falling, k=1..p.
+    Default scales 0.6 / 0.6 (the scales are varied only in the ablation study)."""
     k = np.arange(1, p + 1)
-    return 0.6 * (k - 0.5) / p, 0.6 * (1 - (k - 0.5) / p)
+    return gamma_scale * (k - 0.5) / p, beta_scale * (1 - (k - 0.5) / p)
 
 
-def train(h, J, sigma, p=P, init=None, maxiter=MAX_EVALS, rhobeg=0.2):
+def train(h, J, sigma, p=P, init=None, maxiter=MAX_EVALS, rhobeg=0.2, cvar_alpha=None):
     """COBYLA on the exact (statevector) expectation of the normalised cost. No shots, no randomness.
+    cvar_alpha=None (default) minimises the mean energy; a value such as 0.25 minimises the CVaR instead
+    (mean energy of the lowest-energy 25 % of the probability mass) - used only in the ablation.
     Returns dict with gammas, betas, objective history and the number of objective calls."""
     qc, gam, bet = qaoa_circuit(h, J, sigma, p)
     diag = energy_table(h, J, sigma)
     history = []
+    order = np.argsort(diag, kind="stable")
 
     def objective(theta):
         history.append(None)                                   # count every call
         assert len(history) <= MAX_EVALS, "training budget exceeded"
         bound = qc.assign_parameters({**dict(zip(gam, theta[:p])), **dict(zip(bet, theta[p:]))})
         probs = np.abs(Statevector(bound).data) ** 2
-        val = float(probs @ diag)
+        if cvar_alpha is None:
+            val = float(probs @ diag)
+        else:
+            ps = probs[order]
+            w = np.clip(cvar_alpha - (np.cumsum(ps) - ps), 0, ps)     # probability mass taken from each sorted state
+            val = float(w @ diag[order] / cvar_alpha)
         history[-1] = val
         return val
 

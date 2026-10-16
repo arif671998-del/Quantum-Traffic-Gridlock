@@ -1,0 +1,4927 @@
+{
+ "random_scenarios": {
+  "generator_seed": 2026,
+  "count": 30,
+  "excluded_for_small_denominator": []
+ },
+ "summary": {
+  "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+   "group": "baseline",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7337416830377131,
+    "lift_min": 0.5912795027497708,
+    "enrichment_mean": 9.334455128205128,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.7401558187105678,
+    "enrichment": 10.225961538461538,
+    "E_Q": 92.5926513671875,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "depth p=1": {
+   "group": "depth",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.5633226644937144,
+    "lift_min": 0.4209347391231872,
+    "enrichment_mean": 5.292628205128205,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 89
+   },
+   "R": {
+    "lift": 0.6204683803233438,
+    "enrichment": 6.355769230769231,
+    "E_Q": 102.077880859375,
+    "evals": 44,
+    "regret_pct": 0.0
+   }
+  },
+  "depth p=2": {
+   "group": "depth",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.6645861840319854,
+    "lift_min": 0.5235716369394899,
+    "enrichment_mean": 7.329006410256411,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.6881700389392744,
+    "enrichment": 8.745192307692308,
+    "E_Q": 96.7125244140625,
+    "evals": 147,
+    "regret_pct": 0.0
+   }
+  },
+  "depth p=3": {
+   "group": "depth",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7188645629138353,
+    "lift_min": 0.5345366596215781,
+    "enrichment_mean": 8.869711538461537,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.6879389910291798,
+    "enrichment": 8.716346153846153,
+    "E_Q": 96.7308349609375,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init random angles U(0,1), seed 1": {
+   "group": "init",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.621967447922998,
+    "lift_min": 0.09561904263119304,
+    "enrichment_mean": 7.747115384615385,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.6629195830047319,
+    "enrichment": 7.1826923076923075,
+    "E_Q": 98.713623046875,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init random angles U(0,1), seed 2": {
+   "group": "init",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7407297760502688,
+    "lift_min": 0.5471900779101742,
+    "enrichment_mean": 9.722435897435897,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.7378129929022083,
+    "enrichment": 9.913461538461538,
+    "E_Q": 92.7783203125,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init random angles U(0,1), seed 3": {
+   "group": "init",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.6856067205027752,
+    "lift_min": 0.30477256761503335,
+    "enrichment_mean": 8.228846153846153,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.7289592369873817,
+    "enrichment": 9.85576923076923,
+    "E_Q": 93.47998046875,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init ramp gamma 0.4 / beta 0.4": {
+   "group": "scale",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7426278895164525,
+    "lift_min": 0.595071178964253,
+    "enrichment_mean": 9.508012820512821,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.7467545470228707,
+    "enrichment": 10.451923076923077,
+    "E_Q": 92.0697021484375,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init ramp gamma 0.4 / beta 0.6": {
+   "group": "scale",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7438062252022509,
+    "lift_min": 0.555676643015298,
+    "enrichment_mean": 9.794711538461538,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.7401773831821766,
+    "enrichment": 10.091346153846153,
+    "E_Q": 92.5909423828125,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init ramp gamma 0.4 / beta 0.8": {
+   "group": "scale",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7329707896217567,
+    "lift_min": 0.5303835357470211,
+    "enrichment_mean": 9.378044871794872,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.7347123299487381,
+    "enrichment": 10.048076923076923,
+    "E_Q": 93.0240478515625,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init ramp gamma 0.6 / beta 0.4": {
+   "group": "scale",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7480900640513867,
+    "lift_min": 0.5930555555555556,
+    "enrichment_mean": 9.722435897435899,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.7352945706821766,
+    "enrichment": 10.014423076923077,
+    "E_Q": 92.9779052734375,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init ramp gamma 0.6 / beta 0.8": {
+   "group": "scale",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7316142167204768,
+    "lift_min": 0.5417482112794613,
+    "enrichment_mean": 9.234935897435896,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.7273280387421136,
+    "enrichment": 9.620192307692308,
+    "E_Q": 93.6092529296875,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init ramp gamma 0.8 / beta 0.4": {
+   "group": "scale",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7626462778646171,
+    "lift_min": 0.5609795875420875,
+    "enrichment_mean": 10.353205128205126,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.7393348284700315,
+    "enrichment": 10.086538461538462,
+    "E_Q": 92.65771484375,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init ramp gamma 0.8 / beta 0.6": {
+   "group": "scale",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7500616623638191,
+    "lift_min": 0.5958051672777268,
+    "enrichment_mean": 9.811858974358975,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.741257147082019,
+    "enrichment": 10.298076923076923,
+    "E_Q": 92.50537109375,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init ramp gamma 0.8 / beta 0.8": {
+   "group": "scale",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7469366239747949,
+    "lift_min": 0.5952911131239935,
+    "enrichment_mean": 9.749358974358975,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.7499337662657729,
+    "enrichment": 10.375,
+    "E_Q": 91.8177490234375,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init ramp gamma 1.0 / beta 0.4": {
+   "group": "scale",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7730299258964884,
+    "lift_min": 0.6421287809349221,
+    "enrichment_mean": 10.740705128205128,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.739758416305205,
+    "enrichment": 10.192307692307692,
+    "E_Q": 92.6241455078125,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init ramp gamma 1.0 / beta 0.6": {
+   "group": "scale",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7646162866561156,
+    "lift_min": 0.6150739734299517,
+    "enrichment_mean": 10.32708333333333,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.7469532482255521,
+    "enrichment": 10.447115384615385,
+    "E_Q": 92.053955078125,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "init ramp gamma 1.0 / beta 0.8": {
+   "group": "scale",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.7445966418446379,
+    "lift_min": 0.5902375973877176,
+    "enrichment_mean": 9.667147435897435,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.6883102080047319,
+    "enrichment": 8.697115384615385,
+    "E_Q": 96.701416015625,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  },
+  "surrogate degree 1 (linear only)": {
+   "group": "surrogate",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.439911806573836,
+    "lift_min": -0.6219867242542347,
+    "enrichment_mean": 4.968108974358974,
+    "regret_mean_pct": 41.68500425122115,
+    "regret_share_le_5pct": 0.13333333333333333,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.5566976168178234,
+    "enrichment": 4.5576923076923075,
+    "E_Q": 107.1317138671875,
+    "evals": 300,
+    "regret_pct": 86.11111111111111
+   }
+  },
+  "objective CVaR 0.25": {
+   "group": "objective",
+   "random30": {
+    "n": 30,
+    "lift_mean": 0.6917149612821137,
+    "lift_min": 0.525619284964773,
+    "enrichment_mean": 10.165544871794872,
+    "regret_mean_pct": 1.773229399314564,
+    "regret_share_le_5pct": 0.8666666666666667,
+    "evals_max": 300
+   },
+   "R": {
+    "lift": 0.7626352400433754,
+    "enrichment": 11.475961538461538,
+    "E_Q": 90.8111572265625,
+    "evals": 300,
+    "regret_pct": 0.0
+   }
+  }
+ },
+ "decision": {
+  "rule": "change ramp scale only if mean lift (30 random scenarios) rises >= 0.02 and min lift does not fall",
+  "baseline_mean_lift": 0.7337416830377131,
+  "baseline_min_lift": 0.5912795027497708,
+  "qualifying": [
+   "init ramp gamma 1.0 / beta 0.4",
+   "init ramp gamma 1.0 / beta 0.6"
+  ],
+  "chosen": "init ramp gamma 1.0 / beta 0.4"
+ },
+ "per_scenario": [
+  {
+   "name": "rand00",
+   "denominator": 35.5625,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.7604384061950791,
+     "enrichment": 12.240384615384615,
+     "E_Q": 115.5194091796875,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "depth p=1": {
+     "lift": 0.437335237258348,
+     "enrichment": 3.5673076923076925,
+     "E_Q": 127.009765625,
+     "evals": 59,
+     "regret_pct": 0.9345794392523364
+    },
+    "depth p=2": {
+     "lift": 0.6651128624780316,
+     "enrichment": 9.014423076923077,
+     "E_Q": 118.909423828125,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "depth p=3": {
+     "lift": 0.6638771419156415,
+     "enrichment": 9.350961538461538,
+     "E_Q": 118.953369140625,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.6513826340070299,
+     "enrichment": 8.8125,
+     "E_Q": 119.397705078125,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.777082875659051,
+     "enrichment": 12.639423076923077,
+     "E_Q": 114.927490234375,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.6996546847539543,
+     "enrichment": 10.485576923076923,
+     "E_Q": 117.6810302734375,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.7364345342706503,
+     "enrichment": 12.158653846153847,
+     "E_Q": 116.373046875,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.7801790421792618,
+     "enrichment": 12.75,
+     "E_Q": 114.8173828125,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.7825440740333919,
+     "enrichment": 13.038461538461538,
+     "E_Q": 114.7332763671875,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.6943994398066784,
+     "enrichment": 10.288461538461538,
+     "E_Q": 117.867919921875,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.7813426790421792,
+     "enrichment": 12.966346153846153,
+     "E_Q": 114.7760009765625,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.7488226329086116,
+     "enrichment": 12.038461538461538,
+     "E_Q": 115.9324951171875,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.7455205129613357,
+     "enrichment": 11.701923076923077,
+     "E_Q": 116.0499267578125,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.6955836720123023,
+     "enrichment": 10.64423076923077,
+     "E_Q": 117.8258056640625,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.7487951724516696,
+     "enrichment": 12.08173076923077,
+     "E_Q": 115.9334716796875,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.8033179097100176,
+     "enrichment": 13.538461538461538,
+     "E_Q": 113.9945068359375,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.6627787236379613,
+     "enrichment": 9.495192307692308,
+     "E_Q": 118.992431640625,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.6730592322056239,
+     "enrichment": 9.240384615384615,
+     "E_Q": 118.6268310546875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.668586610281195,
+     "enrichment": 12.29326923076923,
+     "E_Q": 118.785888671875,
+     "evals": 300,
+     "regret_pct": 0.9345794392523364
+    }
+   }
+  },
+  {
+   "name": "rand01",
+   "denominator": 81.71875,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.8241515296367112,
+     "enrichment": 12.879807692307692,
+     "E_Q": 135.6201171875,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "depth p=1": {
+     "lift": 0.6664503166826004,
+     "enrichment": 7.735576923076923,
+     "E_Q": 148.50726318359375,
+     "evals": 54,
+     "regret_pct": 1.2371134020618557
+    },
+    "depth p=2": {
+     "lift": 0.780276051625239,
+     "enrichment": 10.975961538461538,
+     "E_Q": 139.20556640625,
+     "evals": 204,
+     "regret_pct": 1.2371134020618557
+    },
+    "depth p=3": {
+     "lift": 0.7790489065487571,
+     "enrichment": 11.115384615384615,
+     "E_Q": 139.30584716796875,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.8072575585564054,
+     "enrichment": 12.375,
+     "E_Q": 137.00067138671875,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.8263675609464627,
+     "enrichment": 13.110576923076923,
+     "E_Q": 135.43902587890625,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.793284685707457,
+     "enrichment": 11.514423076923077,
+     "E_Q": 138.14251708984375,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.7907452497609943,
+     "enrichment": 11.365384615384615,
+     "E_Q": 138.35003662109375,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.8268358628107074,
+     "enrichment": 12.951923076923077,
+     "E_Q": 135.4007568359375,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.8145479804015296,
+     "enrichment": 12.283653846153847,
+     "E_Q": 136.4049072265625,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.8161224306883366,
+     "enrichment": 12.254807692307692,
+     "E_Q": 136.2762451171875,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.8077034536328872,
+     "enrichment": 12.01923076923077,
+     "E_Q": 136.9642333984375,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.824684064292543,
+     "enrichment": 12.73076923076923,
+     "E_Q": 135.57659912109375,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.8193407923040152,
+     "enrichment": 12.524038461538462,
+     "E_Q": 136.01324462890625,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.8119786687380497,
+     "enrichment": 12.254807692307692,
+     "E_Q": 136.6148681640625,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.8272160313097514,
+     "enrichment": 12.951923076923077,
+     "E_Q": 135.36968994140625,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.8327878525334608,
+     "enrichment": 13.0625,
+     "E_Q": 134.91436767578125,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.8377793379541109,
+     "enrichment": 13.490384615384615,
+     "E_Q": 134.5064697265625,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.6960952437858509,
+     "enrichment": 8.076923076923077,
+     "E_Q": 146.084716796875,
+     "evals": 300,
+     "regret_pct": 31.34020618556701
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.8098746713671128,
+     "enrichment": 13.26923076923077,
+     "E_Q": 136.78680419921875,
+     "evals": 300,
+     "regret_pct": 1.2371134020618557
+    }
+   }
+  },
+  {
+   "name": "rand02",
+   "denominator": 74.5859375,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.7108613962501309,
+     "enrichment": 6.072115384615385,
+     "E_Q": 84.565673828125,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "depth p=1": {
+     "lift": 0.5555982900387556,
+     "enrichment": 3.5096153846153846,
+     "E_Q": 96.1461181640625,
+     "evals": 83,
+     "regret_pct": 0.3968253968253968
+    },
+    "depth p=2": {
+     "lift": 0.6314025348276946,
+     "enrichment": 4.576923076923077,
+     "E_Q": 90.4921875,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "depth p=3": {
+     "lift": 0.6379679153137111,
+     "enrichment": 4.4326923076923075,
+     "E_Q": 90.00250244140625,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.09561904263119304,
+     "enrichment": 0.9423076923076923,
+     "E_Q": 130.4541015625,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.6358149156803184,
+     "enrichment": 4.475961538461538,
+     "E_Q": 90.1630859375,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.5587578231381586,
+     "enrichment": 3.5240384615384617,
+     "E_Q": 95.91046142578125,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.7136862365140882,
+     "enrichment": 6.048076923076923,
+     "E_Q": 84.35498046875,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.6843633798575469,
+     "enrichment": 5.4951923076923075,
+     "E_Q": 86.54205322265625,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.647660914423379,
+     "enrichment": 4.759615384615385,
+     "E_Q": 89.279541015625,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.7140413873468106,
+     "enrichment": 6.024038461538462,
+     "E_Q": 84.3284912109375,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.6998410822771551,
+     "enrichment": 5.605769230769231,
+     "E_Q": 85.38763427734375,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.7404608450298523,
+     "enrichment": 6.5,
+     "E_Q": 82.35797119140625,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.7400590499633393,
+     "enrichment": 6.5,
+     "E_Q": 82.387939453125,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.7083246045878286,
+     "enrichment": 6.091346153846154,
+     "E_Q": 84.7548828125,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.7067976196711009,
+     "enrichment": 5.8125,
+     "E_Q": 84.8687744140625,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.7429583573373835,
+     "enrichment": 6.528846153846154,
+     "E_Q": 82.17169189453125,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.738500968890751,
+     "enrichment": 6.480769230769231,
+     "E_Q": 82.504150390625,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": -0.5974160731119723,
+     "enrichment": 0.004807692307692308,
+     "E_Q": 182.144775390625,
+     "evals": 300,
+     "regret_pct": 244.44444444444446
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.6718954579972767,
+     "enrichment": 6.2548076923076925,
+     "E_Q": 87.47198486328125,
+     "evals": 300,
+     "regret_pct": 0.3968253968253968
+    }
+   }
+  },
+  {
+   "name": "rand03",
+   "denominator": 52.1171875,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.6455050311047819,
+     "enrichment": 4.6875,
+     "E_Q": 261.22528076171875,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "depth p=1": {
+     "lift": 0.5387299036876031,
+     "enrichment": 3.1778846153846154,
+     "E_Q": 266.79010009765625,
+     "evals": 55,
+     "regret_pct": 0.2059732234809475
+    },
+    "depth p=2": {
+     "lift": 0.599994378653875,
+     "enrichment": 3.9615384615384617,
+     "E_Q": 263.59716796875,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "depth p=3": {
+     "lift": 0.649902563333833,
+     "enrichment": 4.75,
+     "E_Q": 260.99609375,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.28559951656423327,
+     "enrichment": 2.5240384615384617,
+     "E_Q": 279.9825439453125,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.5865862970319292,
+     "enrichment": 3.894230769230769,
+     "E_Q": 264.29595947265625,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.5543361658671864,
+     "enrichment": 3.668269230769231,
+     "E_Q": 265.97674560546875,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.6472101727627042,
+     "enrichment": 4.6826923076923075,
+     "E_Q": 261.13641357421875,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.5976767444910808,
+     "enrichment": 4.0,
+     "E_Q": 263.71795654296875,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.6415419820866437,
+     "enrichment": 4.451923076923077,
+     "E_Q": 261.43182373046875,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.6785081884275221,
+     "enrichment": 5.197115384615385,
+     "E_Q": 259.5052490234375,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.6322093764053365,
+     "enrichment": 4.4326923076923075,
+     "E_Q": 261.918212890625,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.6766414330685054,
+     "enrichment": 5.173076923076923,
+     "E_Q": 259.6025390625,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.6434169352420926,
+     "enrichment": 4.644230769230769,
+     "E_Q": 261.3341064453125,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.6639957465147655,
+     "enrichment": 4.605769230769231,
+     "E_Q": 260.2615966796875,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.6779038937190826,
+     "enrichment": 4.913461538461538,
+     "E_Q": 259.5367431640625,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.677785611227702,
+     "enrichment": 5.163461538461538,
+     "E_Q": 259.54290771484375,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.6622425891920252,
+     "enrichment": 4.658653846153846,
+     "E_Q": 260.35296630859375,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": -0.6219867242542347,
+     "enrichment": 0.038461538461538464,
+     "E_Q": 327.28338623046875,
+     "evals": 300,
+     "regret_pct": 40.37075180226571
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.525619284964773,
+     "enrichment": 5.173076923076923,
+     "E_Q": 267.473388671875,
+     "evals": 300,
+     "regret_pct": 0.2059732234809475
+    }
+   }
+  },
+  {
+   "name": "rand04",
+   "denominator": 44.6171875,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.86124228462616,
+     "enrichment": 14.302884615384615,
+     "E_Q": 78.94097900390625,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "depth p=1": {
+     "lift": 0.5425946090877254,
+     "enrichment": 6.048076923076923,
+     "E_Q": 93.15814208984375,
+     "evals": 60,
+     "regret_pct": 1.0309278350515463
+    },
+    "depth p=2": {
+     "lift": 0.7336923809315357,
+     "enrichment": 10.778846153846153,
+     "E_Q": 84.63189697265625,
+     "evals": 239,
+     "regret_pct": 1.0309278350515463
+    },
+    "depth p=3": {
+     "lift": 0.8231209507967081,
+     "enrichment": 13.35576923076923,
+     "E_Q": 80.641845703125,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.8594775980563825,
+     "enrichment": 14.163461538461538,
+     "E_Q": 79.01971435546875,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.8276694646296621,
+     "enrichment": 13.125,
+     "E_Q": 80.43890380859375,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.7983606198564175,
+     "enrichment": 12.45673076923077,
+     "E_Q": 81.74658203125,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.8191018429346875,
+     "enrichment": 13.278846153846153,
+     "E_Q": 80.8211669921875,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.8192550560322185,
+     "enrichment": 13.125,
+     "E_Q": 80.8143310546875,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.8577539507091577,
+     "enrichment": 14.586538461538462,
+     "E_Q": 79.09661865234375,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.8499332428646472,
+     "enrichment": 14.110576923076923,
+     "E_Q": 79.445556640625,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.7938832406758887,
+     "enrichment": 12.658653846153847,
+     "E_Q": 81.94635009765625,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.8651806820171599,
+     "enrichment": 14.471153846153847,
+     "E_Q": 78.7652587890625,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.8603790929784626,
+     "enrichment": 14.29326923076923,
+     "E_Q": 78.9794921875,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.8475816954123621,
+     "enrichment": 13.783653846153847,
+     "E_Q": 79.55047607421875,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.8433327679040449,
+     "enrichment": 13.653846153846153,
+     "E_Q": 79.74005126953125,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.8624885090176851,
+     "enrichment": 14.423076923076923,
+     "E_Q": 78.8853759765625,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.8206517575731045,
+     "enrichment": 12.966346153846153,
+     "E_Q": 80.75201416015625,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.47008651068114166,
+     "enrichment": 5.783653846153846,
+     "E_Q": 96.39324951171875,
+     "evals": 300,
+     "regret_pct": 1.0309278350515463
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.7172999474697951,
+     "enrichment": 11.3125,
+     "E_Q": 85.36328125,
+     "evals": 60,
+     "regret_pct": 1.0309278350515463
+    }
+   }
+  },
+  {
+   "name": "rand05",
+   "denominator": 66.859375,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.6697936141621874,
+     "enrichment": 4.225961538461538,
+     "E_Q": 98.077392578125,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "depth p=1": {
+     "lift": 0.5865454837578874,
+     "enrichment": 3.8653846153846154,
+     "E_Q": 103.643310546875,
+     "evals": 45,
+     "regret_pct": 9.868421052631579
+    },
+    "depth p=2": {
+     "lift": 0.600602141271325,
+     "enrichment": 2.4278846153846154,
+     "E_Q": 102.7034912109375,
+     "evals": 175,
+     "regret_pct": 9.868421052631579
+    },
+    "depth p=3": {
+     "lift": 0.6500953055620472,
+     "enrichment": 3.923076923076923,
+     "E_Q": 99.3944091796875,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.6415579720729142,
+     "enrichment": 3.4471153846153846,
+     "E_Q": 99.9652099609375,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.6900506105398457,
+     "enrichment": 5.072115384615385,
+     "E_Q": 96.7230224609375,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.6241254527927086,
+     "enrichment": 3.144230769230769,
+     "E_Q": 101.1307373046875,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.6712231975928955,
+     "enrichment": 4.384615384615385,
+     "E_Q": 97.9818115234375,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.6961998276466465,
+     "enrichment": 5.413461538461538,
+     "E_Q": 96.3118896484375,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.6401429948586118,
+     "enrichment": 3.2836538461538463,
+     "E_Q": 100.059814453125,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.6391954165692919,
+     "enrichment": 3.2788461538461537,
+     "E_Q": 100.1231689453125,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.6791269864454311,
+     "enrichment": 4.552884615384615,
+     "E_Q": 97.453369140625,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.723212199111942,
+     "enrichment": 6.288461538461538,
+     "E_Q": 94.505859375,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.6796473329048843,
+     "enrichment": 4.600961538461538,
+     "E_Q": 97.4185791015625,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.6667865593596635,
+     "enrichment": 4.048076923076923,
+     "E_Q": 98.2784423828125,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.7215543935498948,
+     "enrichment": 6.326923076923077,
+     "E_Q": 94.61669921875,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.6772354814208927,
+     "enrichment": 4.384615384615385,
+     "E_Q": 97.579833984375,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.6628191458284646,
+     "enrichment": 4.240384615384615,
+     "E_Q": 98.543701171875,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.5695036807665342,
+     "enrichment": 1.6346153846153846,
+     "E_Q": 104.78271484375,
+     "evals": 300,
+     "regret_pct": 57.89473684210526
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.6555196891797149,
+     "enrichment": 5.846153846153846,
+     "E_Q": 99.03173828125,
+     "evals": 300,
+     "regret_pct": 9.868421052631579
+    }
+   }
+  },
+  {
+   "name": "rand06",
+   "denominator": 38.8125,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.6246556083937198,
+     "enrichment": 7.153846153846154,
+     "E_Q": 193.06805419921875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "depth p=1": {
+     "lift": 0.4737193035426731,
+     "enrichment": 3.980769230769231,
+     "E_Q": 198.92626953125,
+     "evals": 57,
+     "regret_pct": 0.0
+    },
+    "depth p=2": {
+     "lift": 0.5241451539855072,
+     "enrichment": 4.798076923076923,
+     "E_Q": 196.9691162109375,
+     "evals": 245,
+     "regret_pct": 0.0
+    },
+    "depth p=3": {
+     "lift": 0.5345366596215781,
+     "enrichment": 4.9375,
+     "E_Q": 196.5657958984375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.6058194318639292,
+     "enrichment": 6.302884615384615,
+     "E_Q": 193.79913330078125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.6311125578703703,
+     "enrichment": 7.3701923076923075,
+     "E_Q": 192.81744384765625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.5928615011070854,
+     "enrichment": 6.6298076923076925,
+     "E_Q": 194.30206298828125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.6536426882045089,
+     "enrichment": 8.125,
+     "E_Q": 191.9429931640625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.555676643015298,
+     "enrichment": 5.528846153846154,
+     "E_Q": 195.74530029296875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.5554501937399355,
+     "enrichment": 5.269230769230769,
+     "E_Q": 195.75408935546875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.6709943639291466,
+     "enrichment": 8.177884615384615,
+     "E_Q": 191.26953125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.6292537867351047,
+     "enrichment": 7.139423076923077,
+     "E_Q": 192.88958740234375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.7103194821859904,
+     "enrichment": 9.89423076923077,
+     "E_Q": 189.74322509765625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.6779765499194848,
+     "enrichment": 8.538461538461538,
+     "E_Q": 190.99853515625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.6248364533011272,
+     "enrichment": 7.1201923076923075,
+     "E_Q": 193.06103515625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.7027350040257649,
+     "enrichment": 9.600961538461538,
+     "E_Q": 190.03759765625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.6946127088365539,
+     "enrichment": 9.23076923076923,
+     "E_Q": 190.35284423828125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.6741583635265701,
+     "enrichment": 8.370192307692308,
+     "E_Q": 191.146728515625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.2151881416062802,
+     "enrichment": 2.1778846153846154,
+     "E_Q": 208.96051025390625,
+     "evals": 300,
+     "regret_pct": 17.22689075630252
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.6047076288244766,
+     "enrichment": 9.298076923076923,
+     "E_Q": 193.84228515625,
+     "evals": 300,
+     "regret_pct": 0.0
+    }
+   }
+  },
+  {
+   "name": "rand07",
+   "denominator": 66.7265625,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.7312302423603794,
+     "enrichment": 6.451923076923077,
+     "E_Q": 102.93408203125,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "depth p=1": {
+     "lift": 0.5290217773094485,
+     "enrichment": 4.1201923076923075,
+     "E_Q": 116.4267578125,
+     "evals": 52,
+     "regret_pct": 1.1764705882352942
+    },
+    "depth p=2": {
+     "lift": 0.6541498360847676,
+     "enrichment": 5.341346153846154,
+     "E_Q": 108.077392578125,
+     "evals": 96,
+     "regret_pct": 1.1764705882352942
+    },
+    "depth p=3": {
+     "lift": 0.7553254156421965,
+     "enrichment": 7.206730769230769,
+     "E_Q": 101.3262939453125,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.3083893133122585,
+     "enrichment": 0.9711538461538461,
+     "E_Q": 131.1488037109375,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.7059111930687273,
+     "enrichment": 6.230769230769231,
+     "E_Q": 104.62353515625,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.30477256761503335,
+     "enrichment": 0.8990384615384616,
+     "E_Q": 131.39013671875,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.7693094339070367,
+     "enrichment": 7.6826923076923075,
+     "E_Q": 100.3931884765625,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.7374374341412012,
+     "enrichment": 6.552884615384615,
+     "E_Q": 102.5198974609375,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.6670435253483199,
+     "enrichment": 5.514423076923077,
+     "E_Q": 107.217041015625,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.7767496487530734,
+     "enrichment": 7.653846153846154,
+     "E_Q": 99.896728515625,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.7461271367521367,
+     "enrichment": 7.211538461538462,
+     "E_Q": 101.9400634765625,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.7772655426765016,
+     "enrichment": 7.850961538461538,
+     "E_Q": 99.8623046875,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.7712101920149865,
+     "enrichment": 7.8125,
+     "E_Q": 100.266357421875,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.7210879873551106,
+     "enrichment": 6.3173076923076925,
+     "E_Q": 103.61083984375,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.774929384732467,
+     "enrichment": 7.8076923076923075,
+     "E_Q": 100.0181884765625,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.7780046247512001,
+     "enrichment": 7.9375,
+     "E_Q": 99.81298828125,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.7145441839363073,
+     "enrichment": 6.072115384615385,
+     "E_Q": 104.0474853515625,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.5293181419037584,
+     "enrichment": 7.5048076923076925,
+     "E_Q": 116.406982421875,
+     "evals": 300,
+     "regret_pct": 60.588235294117645
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.5742521367521367,
+     "enrichment": 9.100961538461538,
+     "E_Q": 113.40869140625,
+     "evals": 300,
+     "regret_pct": 1.1764705882352942
+    }
+   }
+  },
+  {
+   "name": "rand08",
+   "denominator": 89.8828125,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.6384785147761842,
+     "enrichment": 7.403846153846154,
+     "E_Q": 114.24456787109375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "depth p=1": {
+     "lift": 0.510545007605389,
+     "enrichment": 4.389423076923077,
+     "E_Q": 125.74359130859375,
+     "evals": 49,
+     "regret_pct": 0.0
+    },
+    "depth p=2": {
+     "lift": 0.5989861744893524,
+     "enrichment": 6.1826923076923075,
+     "E_Q": 117.79425048828125,
+     "evals": 253,
+     "regret_pct": 0.0
+    },
+    "depth p=3": {
+     "lift": 0.6456757931334203,
+     "enrichment": 7.427884615384615,
+     "E_Q": 113.59765625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.5474420089091699,
+     "enrichment": 4.375,
+     "E_Q": 122.42718505859375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.6852258528900478,
+     "enrichment": 8.625,
+     "E_Q": 110.04278564453125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.6472607018687527,
+     "enrichment": 7.610576923076923,
+     "E_Q": 113.4552001953125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.666058235549761,
+     "enrichment": 8.009615384615385,
+     "E_Q": 111.765625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.7147802585832247,
+     "enrichment": 9.514423076923077,
+     "E_Q": 107.3863525390625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.6978983322468492,
+     "enrichment": 9.192307692307692,
+     "E_Q": 108.90374755859375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.695506709039548,
+     "enrichment": 9.038461538461538,
+     "E_Q": 109.11871337890625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.6757306605823555,
+     "enrichment": 8.341346153846153,
+     "E_Q": 110.896240234375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.7292712407648848,
+     "enrichment": 10.221153846153847,
+     "E_Q": 106.0838623046875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.700602998696219,
+     "enrichment": 9.072115384615385,
+     "E_Q": 108.66064453125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.6974386136462407,
+     "enrichment": 8.913461538461538,
+     "E_Q": 108.945068359375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.7184376358105171,
+     "enrichment": 9.692307692307692,
+     "E_Q": 107.0576171875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.7274683561495002,
+     "enrichment": 10.115384615384615,
+     "E_Q": 106.24591064453125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.6816757659713168,
+     "enrichment": 8.73076923076923,
+     "E_Q": 110.36187744140625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.1984313885267275,
+     "enrichment": 0.9375,
+     "E_Q": 153.7972412109375,
+     "evals": 300,
+     "regret_pct": 118.96024464831804
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.7074940243372447,
+     "enrichment": 11.514423076923077,
+     "E_Q": 108.041259765625,
+     "evals": 300,
+     "regret_pct": 0.0
+    }
+   }
+  },
+  {
+   "name": "rand09",
+   "denominator": 94.8359375,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.7603044680369059,
+     "enrichment": 10.024038461538462,
+     "E_Q": 101.48175048828125,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "depth p=1": {
+     "lift": 0.626868332440893,
+     "enrichment": 6.548076923076923,
+     "E_Q": 114.13629150390625,
+     "evals": 53,
+     "regret_pct": 4.761904761904762
+    },
+    "depth p=2": {
+     "lift": 0.7286464340143339,
+     "enrichment": 9.216346153846153,
+     "E_Q": 104.48406982421875,
+     "evals": 197,
+     "regret_pct": 4.761904761904762
+    },
+    "depth p=3": {
+     "lift": 0.7780391455226955,
+     "enrichment": 10.923076923076923,
+     "E_Q": 99.79986572265625,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.7743713444270534,
+     "enrichment": 10.451923076923077,
+     "E_Q": 100.147705078125,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.7754023704588516,
+     "enrichment": 10.913461538461538,
+     "E_Q": 100.0499267578125,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.7734767587939698,
+     "enrichment": 10.735576923076923,
+     "E_Q": 100.2325439453125,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.7562640301919433,
+     "enrichment": 10.100961538461538,
+     "E_Q": 101.86492919921875,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.7958516970096383,
+     "enrichment": 11.745192307692308,
+     "E_Q": 98.110595703125,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.7747040787956174,
+     "enrichment": 10.557692307692308,
+     "E_Q": 100.11614990234375,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.770925580772716,
+     "enrichment": 10.475961538461538,
+     "E_Q": 100.4744873046875,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.7888295215833264,
+     "enrichment": 11.192307692307692,
+     "E_Q": 98.77655029296875,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.7830488250679628,
+     "enrichment": 11.009615384615385,
+     "E_Q": 99.32476806640625,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.7899789675838207,
+     "enrichment": 11.264423076923077,
+     "E_Q": 98.66754150390625,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.7762100718757723,
+     "enrichment": 10.899038461538462,
+     "E_Q": 99.97332763671875,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.7686646603921246,
+     "enrichment": 10.850961538461538,
+     "E_Q": 100.68890380859375,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.7951669206689184,
+     "enrichment": 11.54326923076923,
+     "E_Q": 98.175537109375,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.7731433808386193,
+     "enrichment": 10.716346153846153,
+     "E_Q": 100.26416015625,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.6744686547491556,
+     "enrichment": 7.610576923076923,
+     "E_Q": 109.6220703125,
+     "evals": 300,
+     "regret_pct": 98.0952380952381
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.7807994892495264,
+     "enrichment": 12.26923076923077,
+     "E_Q": 99.5380859375,
+     "evals": 300,
+     "regret_pct": 4.761904761904762
+    }
+   }
+  },
+  {
+   "name": "rand10",
+   "denominator": 108.84375,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.8740713824289406,
+     "enrichment": 10.3125,
+     "E_Q": 277.70654296875,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "depth p=1": {
+     "lift": 0.7001025068188343,
+     "enrichment": 6.100961538461538,
+     "E_Q": 296.6419677734375,
+     "evals": 40,
+     "regret_pct": 0.1893939393939394
+    },
+    "depth p=2": {
+     "lift": 0.8180784345391904,
+     "enrichment": 8.826923076923077,
+     "E_Q": 283.801025390625,
+     "evals": 127,
+     "regret_pct": 0.1893939393939394
+    },
+    "depth p=3": {
+     "lift": 0.8711700132787826,
+     "enrichment": 10.115384615384615,
+     "E_Q": 278.0223388671875,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.8622651539621017,
+     "enrichment": 11.288461538461538,
+     "E_Q": 278.9915771484375,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.8919697010479471,
+     "enrichment": 10.66826923076923,
+     "E_Q": 275.7584228515625,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.722550827232271,
+     "enrichment": 6.408653846153846,
+     "E_Q": 294.1986083984375,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.8421024888745334,
+     "enrichment": 9.317307692307692,
+     "E_Q": 281.1861572265625,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.8817078039764571,
+     "enrichment": 10.365384615384615,
+     "E_Q": 276.8753662109375,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.8889135623026126,
+     "enrichment": 10.461538461538462,
+     "E_Q": 276.091064453125,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.8767204098478323,
+     "enrichment": 10.245192307692308,
+     "E_Q": 277.418212890625,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.8624558121590583,
+     "enrichment": 9.98076923076923,
+     "E_Q": 278.9708251953125,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.8937944121447028,
+     "enrichment": 10.8125,
+     "E_Q": 275.559814453125,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.8846708566609245,
+     "enrichment": 10.375,
+     "E_Q": 276.5528564453125,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.8731607091587712,
+     "enrichment": 10.25,
+     "E_Q": 277.8056640625,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.8581188989376974,
+     "enrichment": 9.966346153846153,
+     "E_Q": 279.44287109375,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.8857318134510479,
+     "enrichment": 10.490384615384615,
+     "E_Q": 276.4373779296875,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.8726851851851852,
+     "enrichment": 10.20673076923077,
+     "E_Q": 277.857421875,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.7513054478897502,
+     "enrichment": 6.759615384615385,
+     "E_Q": 291.06884765625,
+     "evals": 300,
+     "regret_pct": 8.143939393939394
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.8459649996411139,
+     "enrichment": 10.735576923076923,
+     "E_Q": 280.7657470703125,
+     "evals": 300,
+     "regret_pct": 0.1893939393939394
+    }
+   }
+  },
+  {
+   "name": "rand11",
+   "denominator": 33.0234375,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.6870915395079252,
+     "enrichment": 5.052884615384615,
+     "E_Q": 373.08331298828125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "depth p=1": {
+     "lift": 0.5126863023420866,
+     "enrichment": 2.75,
+     "E_Q": 378.8427734375,
+     "evals": 35,
+     "regret_pct": 0.0
+    },
+    "depth p=2": {
+     "lift": 0.6318384788265909,
+     "enrichment": 4.365384615384615,
+     "E_Q": 374.907958984375,
+     "evals": 176,
+     "regret_pct": 0.0
+    },
+    "depth p=3": {
+     "lift": 0.7412689259522119,
+     "enrichment": 6.278846153846154,
+     "E_Q": 371.294189453125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.43114945587887393,
+     "enrichment": 2.855769230769231,
+     "E_Q": 381.535400390625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.7457398125147859,
+     "enrichment": 7.519230769230769,
+     "E_Q": 371.14654541015625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.792219289685356,
+     "enrichment": 8.567307692307692,
+     "E_Q": 369.61163330078125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.7579400283889283,
+     "enrichment": 7.024038461538462,
+     "E_Q": 370.74365234375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.7749678406671399,
+     "enrichment": 8.158653846153847,
+     "E_Q": 370.18133544921875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.732389992902768,
+     "enrichment": 6.6826923076923075,
+     "E_Q": 371.58740234375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.7619544002838893,
+     "enrichment": 7.673076923076923,
+     "E_Q": 370.611083984375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.7581969334043056,
+     "enrichment": 7.519230769230769,
+     "E_Q": 370.73516845703125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.7614535279157795,
+     "enrichment": 7.8798076923076925,
+     "E_Q": 370.62762451171875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.7562692216702153,
+     "enrichment": 7.730769230769231,
+     "E_Q": 370.798828125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.735491335462503,
+     "enrichment": 6.596153846153846,
+     "E_Q": 371.4849853515625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.7721880914360066,
+     "enrichment": 8.134615384615385,
+     "E_Q": 370.27313232421875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.7656268482375207,
+     "enrichment": 7.778846153846154,
+     "E_Q": 370.48980712890625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.7619895167967826,
+     "enrichment": 7.899038461538462,
+     "E_Q": 370.60992431640625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.5254335965223563,
+     "enrichment": 4.605769230769231,
+     "E_Q": 378.42181396484375,
+     "evals": 300,
+     "regret_pct": 5.85802894555479
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.6712743228057724,
+     "enrichment": 9.115384615384615,
+     "E_Q": 373.60565185546875,
+     "evals": 300,
+     "regret_pct": 0.0
+    }
+   }
+  },
+  {
+   "name": "rand12",
+   "denominator": 98.3828125,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.9265396698562693,
+     "enrichment": 17.677884615384617,
+     "E_Q": 219.72723388671875,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "depth p=1": {
+     "lift": 0.8831958975224331,
+     "enrichment": 15.846153846153847,
+     "E_Q": 223.99151611328125,
+     "evals": 56,
+     "regret_pct": 2.9411764705882355
+    },
+    "depth p=2": {
+     "lift": 0.9272884737552609,
+     "enrichment": 17.70673076923077,
+     "E_Q": 219.653564453125,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "depth p=3": {
+     "lift": 0.9272586953069165,
+     "enrichment": 17.73076923076923,
+     "E_Q": 219.656494140625,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.9288084153895021,
+     "enrichment": 18.447115384615383,
+     "E_Q": 219.5040283203125,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.9291142648693719,
+     "enrichment": 17.96153846153846,
+     "E_Q": 219.47393798828125,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.9283704240451044,
+     "enrichment": 18.02403846153846,
+     "E_Q": 219.547119140625,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.9274702463670293,
+     "enrichment": 17.83653846153846,
+     "E_Q": 219.63568115234375,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.9280571299531486,
+     "enrichment": 17.759615384615383,
+     "E_Q": 219.57794189453125,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.9272822699118558,
+     "enrichment": 17.625,
+     "E_Q": 219.6541748046875,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.9284113694115779,
+     "enrichment": 18.048076923076923,
+     "E_Q": 219.5430908203125,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.9260712796791869,
+     "enrichment": 17.615384615384617,
+     "E_Q": 219.7733154296875,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.931139819741126,
+     "enrichment": 18.576923076923077,
+     "E_Q": 219.274658203125,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.9274764502104343,
+     "enrichment": 17.903846153846153,
+     "E_Q": 219.63507080078125,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.9280316941951878,
+     "enrichment": 17.923076923076923,
+     "E_Q": 219.5804443359375,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.9297464365123481,
+     "enrichment": 17.802884615384617,
+     "E_Q": 219.4117431640625,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.9283046633050107,
+     "enrichment": 18.03846153846154,
+     "E_Q": 219.5535888671875,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.9286651066068451,
+     "enrichment": 18.370192307692307,
+     "E_Q": 219.51812744140625,
+     "evals": 300,
+     "regret_pct": 2.9411764705882355
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.9265657259985707,
+     "enrichment": 18.033653846153847,
+     "E_Q": 219.72467041015625,
+     "evals": 300,
+     "regret_pct": 2.588235294117647
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.9166160019455253,
+     "enrichment": 17.615384615384617,
+     "E_Q": 220.70355224609375,
+     "evals": 95,
+     "regret_pct": 2.9411764705882355
+    }
+   }
+  },
+  {
+   "name": "rand13",
+   "denominator": 27.84375,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.7923856621773289,
+     "enrichment": 10.75,
+     "E_Q": 68.78076171875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "depth p=1": {
+     "lift": 0.5946180555555556,
+     "enrichment": 4.884615384615385,
+     "E_Q": 74.287353515625,
+     "evals": 53,
+     "regret_pct": 0.0
+    },
+    "depth p=2": {
+     "lift": 0.7269658389450057,
+     "enrichment": 8.48076923076923,
+     "E_Q": 70.602294921875,
+     "evals": 143,
+     "regret_pct": 0.0
+    },
+    "depth p=3": {
+     "lift": 0.7808378928170595,
+     "enrichment": 10.557692307692308,
+     "E_Q": 69.102294921875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.7720871913580247,
+     "enrichment": 9.9375,
+     "E_Q": 69.345947265625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.8012591189674523,
+     "enrichment": 11.326923076923077,
+     "E_Q": 68.53369140625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.7458701599326599,
+     "enrichment": 9.08173076923077,
+     "E_Q": 70.075927734375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.7938061167227833,
+     "enrichment": 10.533653846153847,
+     "E_Q": 68.7412109375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.8361479377104377,
+     "enrichment": 12.403846153846153,
+     "E_Q": 67.562255859375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.7884136503928171,
+     "enrichment": 10.600961538461538,
+     "E_Q": 68.891357421875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.8131926907968574,
+     "enrichment": 11.447115384615385,
+     "E_Q": 68.201416015625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.7821618967452301,
+     "enrichment": 10.225961538461538,
+     "E_Q": 69.0654296875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.8457666947250281,
+     "enrichment": 12.975961538461538,
+     "E_Q": 67.29443359375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.7845819304152637,
+     "enrichment": 10.533653846153847,
+     "E_Q": 68.998046875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.7949898288439955,
+     "enrichment": 10.783653846153847,
+     "E_Q": 68.708251953125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.8586121632996633,
+     "enrichment": 13.60576923076923,
+     "E_Q": 66.936767578125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.8371738215488216,
+     "enrichment": 12.408653846153847,
+     "E_Q": 67.53369140625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.8514748176206509,
+     "enrichment": 13.278846153846153,
+     "E_Q": 67.135498046875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.7043437850729517,
+     "enrichment": 7.9951923076923075,
+     "E_Q": 71.232177734375,
+     "evals": 300,
+     "regret_pct": 28.571428571428573
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.65303205667789,
+     "enrichment": 9.447115384615385,
+     "E_Q": 72.660888671875,
+     "evals": 300,
+     "regret_pct": 0.0
+    }
+   }
+  },
+  {
+   "name": "rand14",
+   "denominator": 46.875,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.8123515625,
+     "enrichment": 5.533653846153846,
+     "E_Q": 39.7960205078125,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "depth p=1": {
+     "lift": 0.6726979166666667,
+     "enrichment": 4.653846153846154,
+     "E_Q": 46.34228515625,
+     "evals": 56,
+     "regret_pct": 6.451612903225806
+    },
+    "depth p=2": {
+     "lift": 0.801015625,
+     "enrichment": 5.6923076923076925,
+     "E_Q": 40.327392578125,
+     "evals": 160,
+     "regret_pct": 6.451612903225806
+    },
+    "depth p=3": {
+     "lift": 0.815578125,
+     "enrichment": 5.701923076923077,
+     "E_Q": 39.644775390625,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.789265625,
+     "enrichment": 4.427884615384615,
+     "E_Q": 40.878173828125,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.8206197916666667,
+     "enrichment": 6.778846153846154,
+     "E_Q": 39.408447265625,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.8003411458333334,
+     "enrichment": 5.548076923076923,
+     "E_Q": 40.3590087890625,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.8128151041666667,
+     "enrichment": 5.615384615384615,
+     "E_Q": 39.7742919921875,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.8243932291666667,
+     "enrichment": 6.706730769230769,
+     "E_Q": 39.2315673828125,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.8164322916666666,
+     "enrichment": 6.134615384615385,
+     "E_Q": 39.604736328125,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.820265625,
+     "enrichment": 6.024038461538462,
+     "E_Q": 39.425048828125,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.8146979166666667,
+     "enrichment": 6.1923076923076925,
+     "E_Q": 39.68603515625,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.8528880208333334,
+     "enrichment": 9.552884615384615,
+     "E_Q": 37.8958740234375,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.8204505208333334,
+     "enrichment": 6.403846153846154,
+     "E_Q": 39.4163818359375,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.817359375,
+     "enrichment": 6.471153846153846,
+     "E_Q": 39.561279296875,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.859375,
+     "enrichment": 10.3125,
+     "E_Q": 37.591796875,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.8274635416666667,
+     "enrichment": 6.673076923076923,
+     "E_Q": 39.087646484375,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.8201197916666667,
+     "enrichment": 6.230769230769231,
+     "E_Q": 39.431884765625,
+     "evals": 300,
+     "regret_pct": 6.451612903225806
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.7835546875,
+     "enrichment": 3.860576923076923,
+     "E_Q": 41.1458740234375,
+     "evals": 300,
+     "regret_pct": 33.87096774193548
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.7327473958333334,
+     "enrichment": 7.360576923076923,
+     "E_Q": 43.5274658203125,
+     "evals": 220,
+     "regret_pct": 6.451612903225806
+    }
+   }
+  },
+  {
+   "name": "rand15",
+   "denominator": 139.21875,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.6080027707631874,
+     "enrichment": 7.875,
+     "E_Q": 274.0733642578125,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "depth p=1": {
+     "lift": 0.5438683712121212,
+     "enrichment": 4.115384615384615,
+     "E_Q": 283.0020751953125,
+     "evals": 51,
+     "regret_pct": 6.605922551252847
+    },
+    "depth p=2": {
+     "lift": 0.5366556186868687,
+     "enrichment": 4.600961538461538,
+     "E_Q": 284.0062255859375,
+     "evals": 174,
+     "regret_pct": 6.605922551252847
+    },
+    "depth p=3": {
+     "lift": 0.5859164562289563,
+     "enrichment": 6.331730769230769,
+     "E_Q": 277.148193359375,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.5303284581930415,
+     "enrichment": 5.048076923076923,
+     "E_Q": 284.8870849609375,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.6235970819304153,
+     "enrichment": 8.158653846153847,
+     "E_Q": 271.90234375,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.5607112794612794,
+     "enrichment": 4.399038461538462,
+     "E_Q": 280.6572265625,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.6025270061728395,
+     "enrichment": 7.173076923076923,
+     "E_Q": 274.835693359375,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.5842320777216611,
+     "enrichment": 7.038461538461538,
+     "E_Q": 277.3826904296875,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.5792183992704826,
+     "enrichment": 6.6201923076923075,
+     "E_Q": 278.0806884765625,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.5930555555555556,
+     "enrichment": 6.764423076923077,
+     "E_Q": 276.154296875,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.5417482112794613,
+     "enrichment": 5.576923076923077,
+     "E_Q": 283.2972412109375,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.5609795875420875,
+     "enrichment": 5.918269230769231,
+     "E_Q": 280.619873046875,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.5980894009539843,
+     "enrichment": 7.3798076923076925,
+     "E_Q": 275.4534912109375,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.6610637626262627,
+     "enrichment": 9.3125,
+     "E_Q": 266.686279296875,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.7125780373176207,
+     "enrichment": 11.379807692307692,
+     "E_Q": 259.5145263671875,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.63359375,
+     "enrichment": 8.98076923076923,
+     "E_Q": 270.5106201171875,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.627245545735129,
+     "enrichment": 7.644230769230769,
+     "E_Q": 271.3944091796875,
+     "evals": 300,
+     "regret_pct": 6.605922551252847
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.31181432379349044,
+     "enrichment": 1.9711538461538463,
+     "E_Q": 315.308349609375,
+     "evals": 300,
+     "regret_pct": 47.83599088838269
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.5298391905162738,
+     "enrichment": 7.221153846153846,
+     "E_Q": 284.9552001953125,
+     "evals": 168,
+     "regret_pct": 6.605922551252847
+    }
+   }
+  },
+  {
+   "name": "rand16",
+   "denominator": 64.046875,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.669850878262991,
+     "enrichment": 10.04326923076923,
+     "E_Q": 209.14501953125,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "depth p=1": {
+     "lift": 0.47164704806050256,
+     "enrichment": 4.798076923076923,
+     "E_Q": 221.83935546875,
+     "evals": 52,
+     "regret_pct": 0.5319148936170213
+    },
+    "depth p=2": {
+     "lift": 0.5486894669431569,
+     "enrichment": 6.8076923076923075,
+     "E_Q": 216.905029296875,
+     "evals": 252,
+     "regret_pct": 0.5319148936170213
+    },
+    "depth p=3": {
+     "lift": 0.6491446084410832,
+     "enrichment": 9.485576923076923,
+     "E_Q": 210.47119140625,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.6347089229080264,
+     "enrichment": 8.73076923076923,
+     "E_Q": 211.395751953125,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.6531128019029031,
+     "enrichment": 9.490384615384615,
+     "E_Q": 210.217041015625,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.6331079226640645,
+     "enrichment": 9.211538461538462,
+     "E_Q": 211.498291015625,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.6987031898023909,
+     "enrichment": 10.923076923076923,
+     "E_Q": 207.297119140625,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.6519768541107587,
+     "enrichment": 9.384615384615385,
+     "E_Q": 210.289794921875,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.654176323493535,
+     "enrichment": 9.5,
+     "E_Q": 210.14892578125,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.6949332154183947,
+     "enrichment": 10.788461538461538,
+     "E_Q": 207.53857421875,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.5737413088558185,
+     "enrichment": 7.399038461538462,
+     "E_Q": 215.300537109375,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.7121249085142718,
+     "enrichment": 11.326923076923077,
+     "E_Q": 206.4375,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.6919446816296658,
+     "enrichment": 10.701923076923077,
+     "E_Q": 207.72998046875,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.7357015430592827,
+     "enrichment": 12.51923076923077,
+     "E_Q": 204.927490234375,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.7646339046108807,
+     "enrichment": 13.701923076923077,
+     "E_Q": 203.074462890625,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.7089953342278604,
+     "enrichment": 11.23076923076923,
+     "E_Q": 206.637939453125,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.7097157843376434,
+     "enrichment": 11.336538461538462,
+     "E_Q": 206.591796875,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": -0.08365226274701147,
+     "enrichment": 0.10576923076923077,
+     "E_Q": 257.404541015625,
+     "evals": 300,
+     "regret_pct": 43.08510638297872
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.579954714564528,
+     "enrichment": 8.9375,
+     "E_Q": 214.902587890625,
+     "evals": 300,
+     "regret_pct": 0.5319148936170213
+    }
+   }
+  },
+  {
+   "name": "rand17",
+   "denominator": 114.34375,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.6197283239956273,
+     "enrichment": 8.326923076923077,
+     "E_Q": 149.481689453125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "depth p=1": {
+     "lift": 0.5067556026236677,
+     "enrichment": 5.115384615384615,
+     "E_Q": 162.3994140625,
+     "evals": 89,
+     "regret_pct": 0.0
+    },
+    "depth p=2": {
+     "lift": 0.560742774665209,
+     "enrichment": 6.197115384615385,
+     "E_Q": 156.226318359375,
+     "evals": 226,
+     "regret_pct": 0.0
+    },
+    "depth p=3": {
+     "lift": 0.6176145292429626,
+     "enrichment": 8.326923076923077,
+     "E_Q": 149.723388671875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.616365468707297,
+     "enrichment": 8.004807692307692,
+     "E_Q": 149.8662109375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.7209321194315387,
+     "enrichment": 11.942307692307692,
+     "E_Q": 137.90966796875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.6281899084449303,
+     "enrichment": 8.677884615384615,
+     "E_Q": 148.51416015625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.6230121788740093,
+     "enrichment": 8.427884615384615,
+     "E_Q": 149.106201171875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.6210072765783001,
+     "enrichment": 8.35576923076923,
+     "E_Q": 149.33544921875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.6350052951626127,
+     "enrichment": 8.927884615384615,
+     "E_Q": 147.73486328125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.6425615776168352,
+     "enrichment": 8.98076923076923,
+     "E_Q": 146.870849609375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.6136004543591145,
+     "enrichment": 7.831730769230769,
+     "E_Q": 150.182373046875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.6499449132276578,
+     "enrichment": 9.278846153846153,
+     "E_Q": 146.026611328125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.6368265748838481,
+     "enrichment": 9.052884615384615,
+     "E_Q": 147.526611328125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.7151650895053293,
+     "enrichment": 11.764423076923077,
+     "E_Q": 138.569091796875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.6677563029516261,
+     "enrichment": 9.79326923076923,
+     "E_Q": 143.989990234375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.6513733260453676,
+     "enrichment": 9.298076923076923,
+     "E_Q": 145.86328125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.6948641192948893,
+     "enrichment": 11.216346153846153,
+     "E_Q": 140.890380859375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.4455665823995627,
+     "enrichment": 2.360576923076923,
+     "E_Q": 169.39599609375,
+     "evals": 300,
+     "regret_pct": 85.84905660377359
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.6139527534845586,
+     "enrichment": 10.149038461538462,
+     "E_Q": 150.14208984375,
+     "evals": 300,
+     "regret_pct": 0.0
+    }
+   }
+  },
+  {
+   "name": "rand18",
+   "denominator": 46.8671875,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.6983247207867977,
+     "enrichment": 12.052884615384615,
+     "E_Q": 105.638671875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "depth p=1": {
+     "lift": 0.4209347391231872,
+     "enrichment": 4.552884615384615,
+     "E_Q": 118.63916015625,
+     "evals": 52,
+     "regret_pct": 0.0
+    },
+    "depth p=2": {
+     "lift": 0.5235716369394899,
+     "enrichment": 5.9326923076923075,
+     "E_Q": 113.828857421875,
+     "evals": 204,
+     "regret_pct": 0.0
+    },
+    "depth p=3": {
+     "lift": 0.6031265627604601,
+     "enrichment": 8.639423076923077,
+     "E_Q": 110.100341796875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.5749864560760126,
+     "enrichment": 7.716346153846154,
+     "E_Q": 111.419189453125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.6899821845307551,
+     "enrichment": 11.5625,
+     "E_Q": 106.0296630859375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.5542199741623604,
+     "enrichment": 7.471153846153846,
+     "E_Q": 112.3924560546875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.6998249708284714,
+     "enrichment": 11.89423076923077,
+     "E_Q": 105.568359375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.7539720161693616,
+     "enrichment": 13.899038461538462,
+     "E_Q": 103.0306396484375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.720815448408068,
+     "enrichment": 12.716346153846153,
+     "E_Q": 104.5845947265625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.6988482455409235,
+     "enrichment": 11.682692307692308,
+     "E_Q": 105.6141357421875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.6629698699783297,
+     "enrichment": 10.245192307692308,
+     "E_Q": 107.295654296875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.6996166027671279,
+     "enrichment": 11.677884615384615,
+     "E_Q": 105.578125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.6787068678113019,
+     "enrichment": 10.870192307692308,
+     "E_Q": 106.55810546875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.7507683572262044,
+     "enrichment": 13.79326923076923,
+     "E_Q": 103.1807861328125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.7239696199366561,
+     "enrichment": 12.182692307692308,
+     "E_Q": 104.436767578125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.7028827721286881,
+     "enrichment": 11.807692307692308,
+     "E_Q": 105.425048828125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.6607325179196533,
+     "enrichment": 10.317307692307692,
+     "E_Q": 107.4005126953125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.4284151525254209,
+     "enrichment": 2.418269230769231,
+     "E_Q": 118.28857421875,
+     "evals": 300,
+     "regret_pct": 30.601092896174862
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.6283625395899316,
+     "enrichment": 10.572115384615385,
+     "E_Q": 108.9176025390625,
+     "evals": 300,
+     "regret_pct": 0.0
+    }
+   }
+  },
+  {
+   "name": "rand19",
+   "denominator": 136.8671875,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.8253695095325075,
+     "enrichment": 10.413461538461538,
+     "E_Q": 241.40118408203125,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "depth p=1": {
+     "lift": 0.6337249022489868,
+     "enrichment": 5.860576923076923,
+     "E_Q": 267.63104248046875,
+     "evals": 59,
+     "regret_pct": 3.5632183908045976
+    },
+    "depth p=2": {
+     "lift": 0.8007899459158628,
+     "enrichment": 8.913461538461538,
+     "E_Q": 244.76531982421875,
+     "evals": 152,
+     "regret_pct": 3.5632183908045976
+    },
+    "depth p=3": {
+     "lift": 0.8220449940065072,
+     "enrichment": 10.110576923076923,
+     "E_Q": 241.856201171875,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.8313991238084365,
+     "enrichment": 10.995192307692308,
+     "E_Q": 240.575927734375,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.8406850241166733,
+     "enrichment": 11.33173076923077,
+     "E_Q": 239.30499267578125,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.8023489675495177,
+     "enrichment": 9.129807692307692,
+     "E_Q": 244.55194091796875,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.8332029689194589,
+     "enrichment": 10.822115384615385,
+     "E_Q": 240.32904052734375,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.8554466757520406,
+     "enrichment": 12.427884615384615,
+     "E_Q": 237.28460693359375,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.8232838275586506,
+     "enrichment": 10.163461538461538,
+     "E_Q": 241.6866455078125,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.8428273410297391,
+     "enrichment": 11.302884615384615,
+     "E_Q": 239.01177978515625,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.830261519635824,
+     "enrichment": 10.451923076923077,
+     "E_Q": 240.73162841796875,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.853469358268166,
+     "enrichment": 12.365384615384615,
+     "E_Q": 237.55523681640625,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.8316087176779496,
+     "enrichment": 10.817307692307692,
+     "E_Q": 240.5472412109375,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.842538369056453,
+     "enrichment": 11.471153846153847,
+     "E_Q": 239.05133056640625,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.8401775393858097,
+     "enrichment": 11.427884615384615,
+     "E_Q": 239.37445068359375,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.8517092157086592,
+     "enrichment": 12.024038461538462,
+     "E_Q": 237.796142578125,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.8307012208173983,
+     "enrichment": 10.759615384615385,
+     "E_Q": 240.67144775390625,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.7840558821850562,
+     "enrichment": 7.8798076923076925,
+     "E_Q": 247.0556640625,
+     "evals": 300,
+     "regret_pct": 18.620689655172413
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.7543047013242765,
+     "enrichment": 11.375,
+     "E_Q": 251.12762451171875,
+     "evals": 300,
+     "regret_pct": 3.5632183908045976
+    }
+   }
+  },
+  {
+   "name": "rand20",
+   "denominator": 67.921875,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.6372210720036807,
+     "enrichment": 7.985576923076923,
+     "E_Q": 137.140625,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "depth p=1": {
+     "lift": 0.4936180843110191,
+     "enrichment": 5.543269230769231,
+     "E_Q": 146.8944091796875,
+     "evals": 71,
+     "regret_pct": 1.5555555555555556
+    },
+    "depth p=2": {
+     "lift": 0.5527761602829537,
+     "enrichment": 5.269230769230769,
+     "E_Q": 142.87628173828125,
+     "evals": 236,
+     "regret_pct": 1.5555555555555556
+    },
+    "depth p=3": {
+     "lift": 0.6079974335748792,
+     "enrichment": 6.990384615384615,
+     "E_Q": 139.12554931640625,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.1635934265010352,
+     "enrichment": 1.7740384615384615,
+     "E_Q": 169.310302734375,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.6280687471244536,
+     "enrichment": 7.947115384615385,
+     "E_Q": 137.76226806640625,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.5880833764665286,
+     "enrichment": 6.850961538461538,
+     "E_Q": 140.4781494140625,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.6243422187715666,
+     "enrichment": 7.25,
+     "E_Q": 138.015380859375,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.6083919225902922,
+     "enrichment": 7.514423076923077,
+     "E_Q": 139.0987548828125,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.6182855992638602,
+     "enrichment": 7.0048076923076925,
+     "E_Q": 138.4267578125,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.6024242652979066,
+     "enrichment": 6.908653846153846,
+     "E_Q": 139.50408935546875,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.5791646897285484,
+     "enrichment": 5.740384615384615,
+     "E_Q": 141.08392333984375,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.6169969950540602,
+     "enrichment": 6.8125,
+     "E_Q": 138.5142822265625,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.6030577841039798,
+     "enrichment": 6.4423076923076925,
+     "E_Q": 139.4610595703125,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.5952911131239935,
+     "enrichment": 6.139423076923077,
+     "E_Q": 139.98858642578125,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.6455403870485392,
+     "enrichment": 8.461538461538462,
+     "E_Q": 136.5755615234375,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.6150739734299517,
+     "enrichment": 7.019230769230769,
+     "E_Q": 138.6448974609375,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.596469188520819,
+     "enrichment": 6.144230769230769,
+     "E_Q": 139.9085693359375,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.4156386588451806,
+     "enrichment": 0.09134615384615384,
+     "E_Q": 152.19091796875,
+     "evals": 300,
+     "regret_pct": 42.22222222222222
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.6096913100989187,
+     "enrichment": 8.086538461538462,
+     "E_Q": 139.010498046875,
+     "evals": 300,
+     "regret_pct": 1.5555555555555556
+    }
+   }
+  },
+  {
+   "name": "rand21",
+   "denominator": 64.078125,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.8253798616191172,
+     "enrichment": 10.490384615384615,
+     "E_Q": 153.4393310546875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "depth p=1": {
+     "lift": 0.646443893257742,
+     "enrichment": 5.134615384615385,
+     "E_Q": 164.90521240234375,
+     "evals": 45,
+     "regret_pct": 0.0
+    },
+    "depth p=2": {
+     "lift": 0.7567914075835163,
+     "enrichment": 8.322115384615385,
+     "E_Q": 157.8343505859375,
+     "evals": 126,
+     "regret_pct": 0.0
+    },
+    "depth p=3": {
+     "lift": 0.8143631126554499,
+     "enrichment": 10.567307692307692,
+     "E_Q": 154.145263671875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.7881347537186052,
+     "enrichment": 9.350961538461538,
+     "E_Q": 155.825927734375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.838806464886613,
+     "enrichment": 11.39423076923077,
+     "E_Q": 152.5789794921875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.7731003108997806,
+     "enrichment": 8.83173076923077,
+     "E_Q": 156.789306640625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.8060943596074128,
+     "enrichment": 9.629807692307692,
+     "E_Q": 154.67510986328125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.8306986862960254,
+     "enrichment": 10.884615384615385,
+     "E_Q": 153.0985107421875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.8073850128017557,
+     "enrichment": 9.692307692307692,
+     "E_Q": 154.5924072265625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.8232205178614972,
+     "enrichment": 10.375,
+     "E_Q": 153.57769775390625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.8285974457449402,
+     "enrichment": 10.735576923076923,
+     "E_Q": 153.233154296875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.8347601956839795,
+     "enrichment": 11.552884615384615,
+     "E_Q": 152.8382568359375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.8317712143379663,
+     "enrichment": 10.879807692307692,
+     "E_Q": 153.02978515625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.8334762100707145,
+     "enrichment": 11.16826923076923,
+     "E_Q": 152.9205322265625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.8599836549012436,
+     "enrichment": 12.875,
+     "E_Q": 151.22198486328125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.8454959537307973,
+     "enrichment": 11.322115384615385,
+     "E_Q": 152.15032958984375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.834315372774933,
+     "enrichment": 11.16826923076923,
+     "E_Q": 152.86676025390625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.7094096714216045,
+     "enrichment": 6.927884615384615,
+     "E_Q": 160.8704833984375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.8146450560838819,
+     "enrichment": 11.45673076923077,
+     "E_Q": 154.127197265625,
+     "evals": 300,
+     "regret_pct": 0.0
+    }
+   }
+  },
+  {
+   "name": "rand22",
+   "denominator": 67.15625,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.7901658474872033,
+     "enrichment": 13.721153846153847,
+     "E_Q": 87.3416748046875,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "depth p=1": {
+     "lift": 0.5441938837831549,
+     "enrichment": 6.072115384615385,
+     "E_Q": 103.8602294921875,
+     "evals": 66,
+     "regret_pct": 3.0716723549488054
+    },
+    "depth p=2": {
+     "lift": 0.6736799819683573,
+     "enrichment": 9.48076923076923,
+     "E_Q": 95.1644287109375,
+     "evals": 144,
+     "regret_pct": 3.0716723549488054
+    },
+    "depth p=3": {
+     "lift": 0.8049683355630526,
+     "enrichment": 14.259615384615385,
+     "E_Q": 86.34759521484375,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.7903049019892974,
+     "enrichment": 13.16826923076923,
+     "E_Q": 87.33233642578125,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.8220947606444858,
+     "enrichment": 14.125,
+     "E_Q": 85.19744873046875,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.7834594215332713,
+     "enrichment": 12.682692307692308,
+     "E_Q": 87.79205322265625,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.8115720611330851,
+     "enrichment": 14.408653846153847,
+     "E_Q": 85.90411376953125,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.8500292650651465,
+     "enrichment": 15.120192307692308,
+     "E_Q": 83.32147216796875,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.8106932003257329,
+     "enrichment": 14.216346153846153,
+     "E_Q": 85.963134765625,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.8155828292228944,
+     "enrichment": 14.576923076923077,
+     "E_Q": 85.634765625,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.7792096251163332,
+     "enrichment": 13.163461538461538,
+     "E_Q": 88.07745361328125,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.8147921271521638,
+     "enrichment": 14.052884615384615,
+     "E_Q": 85.6878662109375,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.8169597414495114,
+     "enrichment": 14.745192307692308,
+     "E_Q": 85.54229736328125,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.7890306901465798,
+     "enrichment": 13.600961538461538,
+     "E_Q": 87.41790771484375,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.8617234760353653,
+     "enrichment": 15.639423076923077,
+     "E_Q": 82.5361328125,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.8160808806421591,
+     "enrichment": 14.725961538461538,
+     "E_Q": 85.601318359375,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.8310769543973942,
+     "enrichment": 14.870192307692308,
+     "E_Q": 84.59423828125,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.5939390414146114,
+     "enrichment": 5.8076923076923075,
+     "E_Q": 100.51953125,
+     "evals": 300,
+     "regret_pct": 31.74061433447099
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.7441833410888785,
+     "enrichment": 13.4375,
+     "E_Q": 90.4296875,
+     "evals": 300,
+     "regret_pct": 3.0716723549488054
+    }
+   }
+  },
+  {
+   "name": "rand23",
+   "denominator": 78.890625,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.7288440470885323,
+     "enrichment": 8.076923076923077,
+     "E_Q": 63.14166259765625,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "depth p=1": {
+     "lift": 0.5694808068429392,
+     "enrichment": 4.144230769230769,
+     "E_Q": 75.71392822265625,
+     "evals": 67,
+     "regret_pct": 0.5988023952095808
+    },
+    "depth p=2": {
+     "lift": 0.6937264804911863,
+     "enrichment": 6.591346153846154,
+     "E_Q": 65.912109375,
+     "evals": 246,
+     "regret_pct": 0.5988023952095808
+    },
+    "depth p=3": {
+     "lift": 0.7908442575262428,
+     "enrichment": 9.975961538461538,
+     "E_Q": 58.25042724609375,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.7390533707169736,
+     "enrichment": 8.947115384615385,
+     "E_Q": 62.33624267578125,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.7581343459100812,
+     "enrichment": 8.673076923076923,
+     "E_Q": 60.8309326171875,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.6861801223014459,
+     "enrichment": 6.2451923076923075,
+     "E_Q": 66.5074462890625,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.7655685222321251,
+     "enrichment": 9.197115384615385,
+     "E_Q": 60.24444580078125,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.7613574470192117,
+     "enrichment": 9.16826923076923,
+     "E_Q": 60.57666015625,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.7384684776688453,
+     "enrichment": 8.375,
+     "E_Q": 62.38238525390625,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.7994768456625074,
+     "enrichment": 10.745192307692308,
+     "E_Q": 57.56939697265625,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.7889240134184987,
+     "enrichment": 9.932692307692308,
+     "E_Q": 58.40191650390625,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.7888257575757576,
+     "enrichment": 10.182692307692308,
+     "E_Q": 58.40966796875,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.7411175170825907,
+     "enrichment": 8.413461538461538,
+     "E_Q": 62.17340087890625,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.6965457268766092,
+     "enrichment": 6.475961538461538,
+     "E_Q": 65.689697265625,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.8059795256486433,
+     "enrichment": 11.033653846153847,
+     "E_Q": 57.056396484375,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.8041412903545256,
+     "enrichment": 10.836538461538462,
+     "E_Q": 57.201416015625,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.7296022417805506,
+     "enrichment": 7.778846153846154,
+     "E_Q": 63.08184814453125,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.5737754382055853,
+     "enrichment": 2.423076923076923,
+     "E_Q": 75.3751220703125,
+     "evals": 300,
+     "regret_pct": 68.26347305389221
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.7900481530996237,
+     "enrichment": 11.360576923076923,
+     "E_Q": 58.313232421875,
+     "evals": 300,
+     "regret_pct": 0.5988023952095808
+    }
+   }
+  },
+  {
+   "name": "rand24",
+   "denominator": 56.46875,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.7032503804648589,
+     "enrichment": 5.923076923076923,
+     "E_Q": 205.757080078125,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "depth p=1": {
+     "lift": 0.5849106772274488,
+     "enrichment": 4.3798076923076925,
+     "E_Q": 212.4395751953125,
+     "evals": 57,
+     "regret_pct": 7.936507936507937
+    },
+    "depth p=2": {
+     "lift": 0.6455148381294964,
+     "enrichment": 4.096153846153846,
+     "E_Q": 209.017333984375,
+     "evals": 180,
+     "regret_pct": 7.936507936507937
+    },
+    "depth p=3": {
+     "lift": 0.6769593940232429,
+     "enrichment": 4.730769230769231,
+     "E_Q": 207.24169921875,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.6362972122302158,
+     "enrichment": 5.9375,
+     "E_Q": 209.537841796875,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.7050251625622579,
+     "enrichment": 6.4375,
+     "E_Q": 205.6568603515625,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.7121221292197012,
+     "enrichment": 5.668269230769231,
+     "E_Q": 205.256103515625,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.697560701438849,
+     "enrichment": 5.552884615384615,
+     "E_Q": 206.078369140625,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.6993073810182623,
+     "enrichment": 6.264423076923077,
+     "E_Q": 205.979736328125,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.6879388316270061,
+     "enrichment": 5.653846153846154,
+     "E_Q": 206.6217041015625,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.7046382125069175,
+     "enrichment": 5.923076923076923,
+     "E_Q": 205.6787109375,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.7006757574709463,
+     "enrichment": 6.264423076923077,
+     "E_Q": 205.9024658203125,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.7066075504980631,
+     "enrichment": 6.125,
+     "E_Q": 205.5675048828125,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.697958460154953,
+     "enrichment": 5.519230769230769,
+     "E_Q": 206.055908203125,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.7054856115107914,
+     "enrichment": 6.5,
+     "E_Q": 205.630859375,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.7237306308799114,
+     "enrichment": 6.408653846153846,
+     "E_Q": 204.6005859375,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.7067696804095185,
+     "enrichment": 6.1875,
+     "E_Q": 205.558349609375,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.7021868082457111,
+     "enrichment": 6.278846153846154,
+     "E_Q": 205.817138671875,
+     "evals": 300,
+     "regret_pct": 7.936507936507937
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.48749870296070835,
+     "enrichment": 3.610576923076923,
+     "E_Q": 217.9403076171875,
+     "evals": 300,
+     "regret_pct": 16.666666666666668
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.667860663392363,
+     "enrichment": 5.788461538461538,
+     "E_Q": 207.7554931640625,
+     "evals": 276,
+     "regret_pct": 7.936507936507937
+    }
+   }
+  },
+  {
+   "name": "rand25",
+   "denominator": 34.09375,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.5912795027497708,
+     "enrichment": 5.625,
+     "E_Q": 116.434814453125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "depth p=1": {
+     "lift": 0.4873718205774519,
+     "enrichment": 3.7115384615384617,
+     "E_Q": 119.9774169921875,
+     "evals": 46,
+     "regret_pct": 0.0
+    },
+    "depth p=2": {
+     "lift": 0.53044082263978,
+     "enrichment": 4.600961538461538,
+     "E_Q": 118.509033203125,
+     "evals": 194,
+     "regret_pct": 0.0
+    },
+    "depth p=3": {
+     "lift": 0.5818880327681026,
+     "enrichment": 5.399038461538462,
+     "E_Q": 116.7550048828125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.15344652268560954,
+     "enrichment": 2.3365384615384617,
+     "E_Q": 131.3621826171875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.5471900779101742,
+     "enrichment": 4.5625,
+     "E_Q": 117.93798828125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.46137789298808435,
+     "enrichment": 3.4423076923076925,
+     "E_Q": 120.8636474609375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.595071178964253,
+     "enrichment": 5.711538461538462,
+     "E_Q": 116.3055419921875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.5722459326306141,
+     "enrichment": 5.485576923076923,
+     "E_Q": 117.083740234375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.5303835357470211,
+     "enrichment": 4.389423076923077,
+     "E_Q": 118.510986328125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.6257483100366636,
+     "enrichment": 6.1201923076923075,
+     "E_Q": 115.2596435546875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.5835565135197067,
+     "enrichment": 5.418269230769231,
+     "E_Q": 116.6981201171875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.6371913668652612,
+     "enrichment": 6.5,
+     "E_Q": 114.8695068359375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.5958051672777268,
+     "enrichment": 5.6923076923076925,
+     "E_Q": 116.280517578125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.61125830659945,
+     "enrichment": 5.889423076923077,
+     "E_Q": 115.753662109375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.6421287809349221,
+     "enrichment": 6.5673076923076925,
+     "E_Q": 114.701171875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.6281185552245646,
+     "enrichment": 6.3701923076923075,
+     "E_Q": 115.1788330078125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.5902375973877176,
+     "enrichment": 5.365384615384615,
+     "E_Q": 116.4703369140625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": -0.2752778414298808,
+     "enrichment": 0.052884615384615384,
+     "E_Q": 145.97900390625,
+     "evals": 300,
+     "regret_pct": 49.75609756097561
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.5492309234647113,
+     "enrichment": 8.475961538461538,
+     "E_Q": 117.868408203125,
+     "evals": 300,
+     "regret_pct": 0.0
+    }
+   }
+  },
+  {
+   "name": "rand26",
+   "denominator": 106.9609375,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.7295457554232707,
+     "enrichment": 6.461538461538462,
+     "E_Q": 180.17803955078125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "depth p=1": {
+     "lift": 0.6348222600613542,
+     "enrichment": 5.0048076923076925,
+     "E_Q": 190.30975341796875,
+     "evals": 63,
+     "regret_pct": 0.0
+    },
+    "depth p=2": {
+     "lift": 0.7104433341246074,
+     "enrichment": 5.485576923076923,
+     "E_Q": 182.22125244140625,
+     "evals": 150,
+     "regret_pct": 0.0
+    },
+    "depth p=3": {
+     "lift": 0.7307161182528669,
+     "enrichment": 6.110576923076923,
+     "E_Q": 180.0528564453125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.7209629044627858,
+     "enrichment": 5.399038461538462,
+     "E_Q": 181.0960693359375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.7385468784237821,
+     "enrichment": 6.471153846153846,
+     "E_Q": 179.21527099609375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.7183408580454314,
+     "enrichment": 6.024038461538462,
+     "E_Q": 181.37652587890625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.7379465753049449,
+     "enrichment": 6.394230769230769,
+     "E_Q": 179.27947998046875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.7353930045285224,
+     "enrichment": 6.221153846153846,
+     "E_Q": 179.5526123046875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.7410040126725587,
+     "enrichment": 6.576923076923077,
+     "E_Q": 178.95245361328125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.7328759540939304,
+     "enrichment": 6.331730769230769,
+     "E_Q": 179.82183837890625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.7362757696662041,
+     "enrichment": 6.283653846153846,
+     "E_Q": 179.45819091796875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.7411740605142064,
+     "enrichment": 6.528846153846154,
+     "E_Q": 178.93426513671875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.7408219815937477,
+     "enrichment": 6.4375,
+     "E_Q": 178.971923828125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.7423255925425462,
+     "enrichment": 6.5576923076923075,
+     "E_Q": 178.81109619140625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.7403049905047111,
+     "enrichment": 6.9375,
+     "E_Q": 179.0272216796875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.7418873484405814,
+     "enrichment": 6.509615384615385,
+     "E_Q": 178.85797119140625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.7264569333868965,
+     "enrichment": 6.3173076923076925,
+     "E_Q": 180.5084228515625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.6623785698634139,
+     "enrichment": 2.7115384615384617,
+     "E_Q": 187.3623046875,
+     "evals": 300,
+     "regret_pct": 28.925619834710744
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.7385320420349134,
+     "enrichment": 8.086538461538462,
+     "E_Q": 179.21685791015625,
+     "evals": 300,
+     "regret_pct": 0.0
+    }
+   }
+  },
+  {
+   "name": "rand27",
+   "denominator": 45.09375,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.8007866640679141,
+     "enrichment": 17.02403846153846,
+     "E_Q": 177.4832763671875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "depth p=1": {
+     "lift": 0.6294490103083853,
+     "enrichment": 11.91826923076923,
+     "E_Q": 185.20953369140625,
+     "evals": 52,
+     "regret_pct": 0.0
+    },
+    "depth p=2": {
+     "lift": 0.7380267888080388,
+     "enrichment": 15.822115384615385,
+     "E_Q": 180.3133544921875,
+     "evals": 181,
+     "regret_pct": 0.0
+    },
+    "depth p=3": {
+     "lift": 0.8059665735446986,
+     "enrichment": 17.03846153846154,
+     "E_Q": 177.24969482421875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.7905987417706167,
+     "enrichment": 16.673076923076923,
+     "E_Q": 177.94268798828125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.8197507904539154,
+     "enrichment": 17.326923076923077,
+     "E_Q": 176.62811279296875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.8183634355509356,
+     "enrichment": 16.5625,
+     "E_Q": 176.690673828125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.8754290648821899,
+     "enrichment": 18.221153846153847,
+     "E_Q": 174.11737060546875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.8051422817047817,
+     "enrichment": 17.10096153846154,
+     "E_Q": 177.286865234375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.800495657917533,
+     "enrichment": 16.942307692307693,
+     "E_Q": 177.49639892578125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.8000530578655579,
+     "enrichment": 16.96153846153846,
+     "E_Q": 177.516357421875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.7974272349272349,
+     "enrichment": 16.91346153846154,
+     "E_Q": 177.634765625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.8258280816874567,
+     "enrichment": 17.485576923076923,
+     "E_Q": 176.35406494140625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.8082824410949411,
+     "enrichment": 17.23076923076923,
+     "E_Q": 177.145263671875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.8071048813236313,
+     "enrichment": 17.139423076923077,
+     "E_Q": 177.1983642578125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.8686601264726265,
+     "enrichment": 17.91346153846154,
+     "E_Q": 174.422607421875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.8274739583333334,
+     "enrichment": 17.548076923076923,
+     "E_Q": 176.27984619140625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.8896788916320166,
+     "enrichment": 17.97596153846154,
+     "E_Q": 173.47479248046875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.7024523020616771,
+     "enrichment": 15.54326923076923,
+     "E_Q": 181.91754150390625,
+     "evals": 300,
+     "regret_pct": 6.6765578635014835
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.8158242376992377,
+     "enrichment": 16.58173076923077,
+     "E_Q": 176.80517578125,
+     "evals": 149,
+     "regret_pct": 0.0
+    }
+   }
+  },
+  {
+   "name": "rand28",
+   "denominator": 89.734375,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.7930592133902141,
+     "enrichment": 14.461538461538462,
+     "E_Q": 169.5697021484375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "depth p=1": {
+     "lift": 0.43410456207557024,
+     "enrichment": 3.918269230769231,
+     "E_Q": 201.7802734375,
+     "evals": 48,
+     "regret_pct": 0.0
+    },
+    "depth p=2": {
+     "lift": 0.6793283671426084,
+     "enrichment": 10.802884615384615,
+     "E_Q": 179.7752685546875,
+     "evals": 259,
+     "regret_pct": 0.0
+    },
+    "depth p=3": {
+     "lift": 0.7654794423646178,
+     "enrichment": 13.745192307692308,
+     "E_Q": 172.0445556640625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.5997301062162633,
+     "enrichment": 8.653846153846153,
+     "E_Q": 186.91796875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.71882481934529,
+     "enrichment": 12.004807692307692,
+     "E_Q": 176.2310791015625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.8613978430262929,
+     "enrichment": 16.9375,
+     "E_Q": 163.4373779296875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.8134345616402577,
+     "enrichment": 15.20673076923077,
+     "E_Q": 167.7413330078125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.7898963956120495,
+     "enrichment": 14.072115384615385,
+     "E_Q": 169.853515625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.8432412284520285,
+     "enrichment": 16.379807692307693,
+     "E_Q": 165.066650390625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.80994934050148,
+     "enrichment": 15.08173076923077,
+     "E_Q": 168.0540771484375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.8169619536827442,
+     "enrichment": 15.110576923076923,
+     "E_Q": 167.4248046875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.8113083318822915,
+     "enrichment": 15.173076923076923,
+     "E_Q": 167.93212890625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.8194976493122061,
+     "enrichment": 15.04326923076923,
+     "E_Q": 167.197265625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.8243282583144698,
+     "enrichment": 15.197115384615385,
+     "E_Q": 166.7637939453125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.8196581708166464,
+     "enrichment": 15.427884615384615,
+     "E_Q": 167.182861328125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.8100921774333972,
+     "enrichment": 15.0625,
+     "E_Q": 168.041259765625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.7037521221487028,
+     "enrichment": 12.41826923076923,
+     "E_Q": 177.5836181640625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.6448284868535609,
+     "enrichment": 10.240384615384615,
+     "E_Q": 182.87109375,
+     "evals": 300,
+     "regret_pct": 9.933774834437086
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.8029149616924952,
+     "enrichment": 14.89423076923077,
+     "E_Q": 168.685302734375,
+     "evals": 224,
+     "regret_pct": 0.0
+    }
+   }
+  },
+  {
+   "name": "rand29",
+   "denominator": 28.2890625,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.6723410314830157,
+     "enrichment": 6.783653846153846,
+     "E_Q": 189.2691650390625,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "depth p=1": {
+     "lift": 0.46764533278099973,
+     "enrichment": 3.331730769230769,
+     "E_Q": 195.059814453125,
+     "evals": 77,
+     "regret_pct": 0.1388888888888889
+    },
+    "depth p=2": {
+     "lift": 0.5642130972107152,
+     "enrichment": 4.600961538461538,
+     "E_Q": 192.3280029296875,
+     "evals": 282,
+     "regret_pct": 0.1388888888888889
+    },
+    "depth p=3": {
+     "lift": 0.6552035867163767,
+     "enrichment": 6.572115384615385,
+     "E_Q": 189.75396728515625,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.7286208057166529,
+     "enrichment": 8.35576923076923,
+     "E_Q": 187.67706298828125,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.787215634493234,
+     "enrichment": 10.533653846153847,
+     "E_Q": 186.01947021484375,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.6509553645401823,
+     "enrichment": 6.4326923076923075,
+     "E_Q": 189.8741455078125,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.7367375207125103,
+     "enrichment": 8.264423076923077,
+     "E_Q": 187.44744873046875,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.741559652029826,
+     "enrichment": 8.432692307692308,
+     "E_Q": 187.31103515625,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.7660090444628556,
+     "enrichment": 9.740384615384615,
+     "E_Q": 186.619384765625,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.7495857497928748,
+     "enrichment": 9.192307692307692,
+     "E_Q": 187.083984375,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.7376803714443524,
+     "enrichment": 8.326923076923077,
+     "E_Q": 187.4207763671875,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.7618190762220381,
+     "enrichment": 9.639423076923077,
+     "E_Q": 186.7379150390625,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.8078202671913836,
+     "enrichment": 11.23076923076923,
+     "E_Q": 185.43658447265625,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.7351581917978459,
+     "enrichment": 8.25,
+     "E_Q": 187.49212646484375,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.7456654756973212,
+     "enrichment": 8.95673076923077,
+     "E_Q": 187.19488525390625,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.7586733637116818,
+     "enrichment": 9.572115384615385,
+     "E_Q": 186.826904296875,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.7476353217343276,
+     "enrichment": 9.216346153846153,
+     "E_Q": 187.13916015625,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.29856004901960786,
+     "enrichment": 2.6346153846153846,
+     "E_Q": 199.84307861328125,
+     "evals": 300,
+     "regret_pct": 21.38888888888889
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.5764205330019332,
+     "enrichment": 7.9375,
+     "E_Q": 191.982666015625,
+     "evals": 300,
+     "regret_pct": 0.1388888888888889
+    }
+   }
+  },
+  {
+   "name": "R",
+   "denominator": 79.25,
+   "results": {
+    "baseline (p=4, ramp 0.6/0.6, degree 2, mean)": {
+     "lift": 0.7401558187105678,
+     "enrichment": 10.225961538461538,
+     "E_Q": 92.5926513671875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "depth p=1": {
+     "lift": 0.6204683803233438,
+     "enrichment": 6.355769230769231,
+     "E_Q": 102.077880859375,
+     "evals": 44,
+     "regret_pct": 0.0
+    },
+    "depth p=2": {
+     "lift": 0.6881700389392744,
+     "enrichment": 8.745192307692308,
+     "E_Q": 96.7125244140625,
+     "evals": 147,
+     "regret_pct": 0.0
+    },
+    "depth p=3": {
+     "lift": 0.6879389910291798,
+     "enrichment": 8.716346153846153,
+     "E_Q": 96.7308349609375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 1": {
+     "lift": 0.6629195830047319,
+     "enrichment": 7.1826923076923075,
+     "E_Q": 98.713623046875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 2": {
+     "lift": 0.7378129929022083,
+     "enrichment": 9.913461538461538,
+     "E_Q": 92.7783203125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init random angles U(0,1), seed 3": {
+     "lift": 0.7289592369873817,
+     "enrichment": 9.85576923076923,
+     "E_Q": 93.47998046875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.4": {
+     "lift": 0.7467545470228707,
+     "enrichment": 10.451923076923077,
+     "E_Q": 92.0697021484375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.6": {
+     "lift": 0.7401773831821766,
+     "enrichment": 10.091346153846153,
+     "E_Q": 92.5909423828125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.4 / beta 0.8": {
+     "lift": 0.7347123299487381,
+     "enrichment": 10.048076923076923,
+     "E_Q": 93.0240478515625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.4": {
+     "lift": 0.7352945706821766,
+     "enrichment": 10.014423076923077,
+     "E_Q": 92.9779052734375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.6 / beta 0.8": {
+     "lift": 0.7273280387421136,
+     "enrichment": 9.620192307692308,
+     "E_Q": 93.6092529296875,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.4": {
+     "lift": 0.7393348284700315,
+     "enrichment": 10.086538461538462,
+     "E_Q": 92.65771484375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.6": {
+     "lift": 0.741257147082019,
+     "enrichment": 10.298076923076923,
+     "E_Q": 92.50537109375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 0.8 / beta 0.8": {
+     "lift": 0.7499337662657729,
+     "enrichment": 10.375,
+     "E_Q": 91.8177490234375,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.4": {
+     "lift": 0.739758416305205,
+     "enrichment": 10.192307692307692,
+     "E_Q": 92.6241455078125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.6": {
+     "lift": 0.7469532482255521,
+     "enrichment": 10.447115384615385,
+     "E_Q": 92.053955078125,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "init ramp gamma 1.0 / beta 0.8": {
+     "lift": 0.6883102080047319,
+     "enrichment": 8.697115384615385,
+     "E_Q": 96.701416015625,
+     "evals": 300,
+     "regret_pct": 0.0
+    },
+    "surrogate degree 1 (linear only)": {
+     "lift": 0.5566976168178234,
+     "enrichment": 4.5576923076923075,
+     "E_Q": 107.1317138671875,
+     "evals": 300,
+     "regret_pct": 86.11111111111111
+    },
+    "objective CVaR 0.25": {
+     "lift": 0.7626352400433754,
+     "enrichment": 11.475961538461538,
+     "E_Q": 90.8111572265625,
+     "evals": 300,
+     "regret_pct": 0.0
+    }
+   }
+  }
+ ]
+}
