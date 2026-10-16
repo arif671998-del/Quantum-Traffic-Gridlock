@@ -1,0 +1,6 @@
+{
+  "scenarios": 31,
+  "evaluations": 7936,
+  "recursion_vs_scorer_mismatches": 0,
+  "max_abs_diff_qubo_vs_global_quadratic_fit": 1.9326762412674725e-12
+}
