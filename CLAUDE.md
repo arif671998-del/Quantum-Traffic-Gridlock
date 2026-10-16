@@ -100,9 +100,9 @@ circuit consistency (statevector of the bound circuit vs counts, e.g. total vari
 
 ## Status
 - [x] Traffic recursion + QUBO builder (`traffic_qubo.py`) verified in a numpy prototype (see `research/`)
-- [ ] Tests
-- [ ] QAOA + run.py with the four required outputs
-- [ ] Baselines + metrics.json
-- [ ] Runs on R (5 seeds); then H when released (~15:30)
+- [x] Tests (`.venv/bin/python -m unittest discover -s tests`, 19 tests, ~4 s; unittest because pytest is not installed)
+- [x] QAOA + run.py with the four required outputs (`qaoa.py`, `run.py`)
+- [x] Baselines + metrics.json (`baselines.py`)
+- [x] Runs on R, seeds 0-4 (`outputs/R/seed0..4`); [ ] H when released (~15:30): `python run.py --scenario <H.json> --seed S --out outputs/H/seedS`
 - [ ] Ablations + generalisation study
 - [ ] README, report ≤ 3 pages, AI disclosure, tag

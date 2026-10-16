@@ -88,6 +88,7 @@ def run_pipeline(scenario_path, seed, out_dir):
                 "shots": counts.get(s, 0), **extra}
 
     _write(out, "schedule.json", {
+        "bits": raw_best,          # top-level field so official/scorer.py can read this file directly (= primary)
         "bit_order": BIT_ORDER,
         "primary": entry(raw_best, "raw QAOA: sampled schedule with the lowest QUBO energy"),
         "most_frequent": entry(most_freq, "raw QAOA: most frequent sample"),

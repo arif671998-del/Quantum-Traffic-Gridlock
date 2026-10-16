@@ -71,6 +71,13 @@ class PipelineTests(unittest.TestCase):
         sch = load(self.d0, "schedule.json")
         self.assertIn("A slot 1", sch["bit_order"])
 
+    def test_schedule_json_readable_by_official_scorer(self):
+        """scorer.py --schedule schedule.json must work and agree with the cost we report."""
+        sch = load(self.d0, "schedule.json")
+        res = scorer.evaluate(R, scorer.decode_schedule(json.loads((self.d0 / "schedule.json").read_text())))
+        self.assertEqual(res["cost"], sch["primary"]["official_cost"])
+        self.assertEqual(sch["bits"], sch["primary"]["bits"])
+
     def test_qubit_order_in_real_circuit(self):
         """Flip only schedule bit 0 (A slot 1) with an X on qubit 7: the sampled string must be 10000000."""
         from qiskit import QuantumCircuit

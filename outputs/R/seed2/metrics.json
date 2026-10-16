@@ -1,0 +1,91 @@
+{
+  "scenario": "R",
+  "seed": 2,
+  "shots": 4096,
+  "C_star": 72.0,
+  "C_star_schedule": "11101010",
+  "C_rand": 151.25,
+  "E_Q": 92.4876708984375,
+  "lift": 0.7414804933951105,
+  "lift_clipped": 0.7414804933951105,
+  "elite_fraction": 0.515380859375,
+  "elite_enrichment": 10.149038461538462,
+  "elite_set": [
+    "11101010",
+    "11101100",
+    "11101001",
+    "11111010",
+    "11111100",
+    "11100100",
+    "11111001",
+    "11011010",
+    "11100010",
+    "11100101",
+    "11011100",
+    "11100011",
+    "11110100"
+  ],
+  "baselines": {
+    "alternating_best": {
+      "bits": "10101010",
+      "cost": 116.0
+    },
+    "greedy_per_slot": {
+      "bits": "01111001",
+      "cost": 92.5
+    },
+    "enumeration_optimum": {
+      "bits": "11101010",
+      "cost": 72.0
+    },
+    "uniform_random_mean": 151.25,
+    "qubo_minimiser": {
+      "bits": "11101010",
+      "cost": 72.0,
+      "regret_percent_of_C_star": 0.0,
+      "regret_percent_of_range": 0.0
+    },
+    "qaoa_raw_best_sample": {
+      "bits": "11101010",
+      "cost": 72.0
+    },
+    "qaoa_raw_most_frequent": {
+      "bits": "11111000",
+      "cost": 102.5
+    },
+    "hybrid_refined (NOT raw QAOA)": {
+      "bits": "11101010",
+      "cost": 72.0
+    }
+  },
+  "qubo_cost_correlation": 0.9948541153701416,
+  "qaoa": {
+    "p": 4,
+    "n_qubits": 8,
+    "optimizer": "COBYLA (scipy), maxiter 300, rhobeg 0.2",
+    "objective": "exact statevector expectation of the sigma-normalised cost Hamiltonian",
+    "training_evaluations": 300,
+    "initial_objective": 1.2514025500530708,
+    "final_objective": -1.3496489323156113,
+    "gammas": [
+      -0.7102161019942033,
+      -0.8362416422374789,
+      0.46217828237295994,
+      1.1566251594373558
+    ],
+    "betas": [
+      0.587671854306806,
+      0.8548493953386838,
+      -0.3426846303453259,
+      -0.2186268156402034
+    ],
+    "sigma": 45.201588398528635
+  },
+  "runtime_seconds": 1.2685406250020606,
+  "versions": {
+    "python": "3.13.9",
+    "qiskit": "2.5.2",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  }
+}
