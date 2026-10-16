@@ -105,5 +105,5 @@ circuit consistency (statevector of the bound circuit vs counts, e.g. total vari
 - [x] Baselines + metrics.json (`baselines.py`)
 - [x] Runs on R, seeds 0-4 (`outputs/R/seed0..4`); [ ] H when released (~15:30): `python run.py --scenario <H.json> --seed S --out outputs/H/seedS`
 - [x] Ablations (`ablations.py` -> `logs/ablations.md`; ramp scale changed to 1.0/0.4 by the pre-set rule)
-- [ ] Generalisation study
+- [x] Generalisation study (`generalisation.py` -> `logs/generalisation.md`)
 - [ ] README, report ≤ 3 pages, AI disclosure, tag
