@@ -1,0 +1,61 @@
+{
+  "bits": "10001100",
+  "bit_order": "Eight characters: A slot 1, A slot 2, A slot 3, A slot 4, B slot 1, B slot 2, B slot 3, B slot 4 (left to right). 1 = North-South green, 0 = East-West green.",
+  "primary": {
+    "label": "raw QAOA: sampled schedule with the lowest QUBO energy",
+    "bits": "10001100",
+    "A": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "B": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "official_cost": 188.0,
+    "qubo_energy": 189.171875,
+    "shots": 367
+  },
+  "most_frequent": {
+    "label": "raw QAOA: most frequent sample",
+    "bits": "10001101",
+    "A": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "B": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "official_cost": 189.0,
+    "qubo_energy": 189.51562499999983,
+    "shots": 400
+  },
+  "hybrid": {
+    "label": "hybrid (classical refinement, NOT raw QAOA): greedy 1-bit-flip descent on the QUBO starting from the primary schedule",
+    "bits": "10001100",
+    "A": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "B": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "official_cost": 188.0,
+    "qubo_energy": 189.171875,
+    "shots": 367
+  }
+}

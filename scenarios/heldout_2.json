@@ -1,0 +1,44 @@
+{
+  "name": "heldout_2",
+  "arrivals": {
+    "A": {
+      "NS": [
+        8,
+        5,
+        2,
+        3
+      ],
+      "EW": [
+        3,
+        6,
+        2,
+        8
+      ]
+    },
+    "B": {
+      "NS": [
+        3,
+        6,
+        8,
+        6
+      ],
+      "EW": [
+        3,
+        6,
+        6,
+        6
+      ]
+    }
+  },
+  "service_capacity": 4,
+  "storage_capacity": 5,
+  "overflow_weight": 3,
+  "switch_weight": 0.75,
+  "link": {
+    "from": "A",
+    "to": "B",
+    "phase": "EW",
+    "fraction": 0.58
+  },
+  "note": "OUR OWN test scenario (random, scenario_gen seed 99). NOT the official scenario H."
+}
