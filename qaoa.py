@@ -75,9 +75,10 @@ def energy_table(h, J, sigma):
     return e
 
 
-def initial_angles(p=P, gamma_scale=0.6, beta_scale=0.6):
+def initial_angles(p=P, gamma_scale=1.0, beta_scale=0.4):
     """Linear ramp: gamma_k = gamma_scale (k-0.5)/p rising, beta_k = beta_scale (1-(k-0.5)/p) falling, k=1..p.
-    Default scales 0.6 / 0.6 (the scales are varied only in the ablation study)."""
+    Default scales 1.0 / 0.4: chosen by the pre-registered rule in ablations.py (30 random scenarios, never R or H);
+    the original 0.6 / 0.6 is kept as the ablation baseline."""
     k = np.arange(1, p + 1)
     return gamma_scale * (k - 0.5) / p, beta_scale * (1 - (k - 0.5) / p)
 
