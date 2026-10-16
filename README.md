@@ -7,7 +7,7 @@ from the traffic queue recursion with a documented, scenario-independent rule, c
 runs a depth-4 QAOA on 8 qubits in Qiskit (noiseless statevector simulation, CPU only), and writes the sampled schedule
 distribution (4,096 shots). The QUBO is never built from the optimal schedule; enumerating all 256 schedules is used only
 for benchmarks (C\*, C_rand, elite set). The full derivation, benchmarks and limitations are in [`REPORT.md`](REPORT.md);
-AI assistance is declared in [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md).
+AI assistance is declared in [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md). PDF versions: [`REPORT.pdf`](REPORT.pdf), [`AI_DISCLOSURE.pdf`](AI_DISCLOSURE.pdf).
 
 > **Scenario H:** the organisers released scenario H late (about 17:40 IST on 16 Oct 2026, Discord #doubts). The
 > pipeline ran on it unchanged: `python run.py --scenario official/scenario_H.json --seed N --out outputs/H/seedN`
@@ -28,7 +28,8 @@ pip install -r requirements.txt        # qiskit 2.x, numpy, scipy — nothing el
 python run.py --scenario official/scenario_R.json --seed 0 --out outputs/R/seed0
 ```
 
-No manual changes are needed for another scenario file (same JSON format as `official/scenario_R.json`).
+No manual changes are needed for another scenario file (same JSON format as `official/scenario_R.json`), e.g. the
+judges' unseen scenario S: `python run.py --scenario path/to/scenario_S.json --seed 0 --out outputs/S/seed0`.
 The training does not depend on `--seed`; the seed only sets the final 4,096-shot sampler, so a given seed always
 reproduces the same files.
 
@@ -84,7 +85,7 @@ All values are read from `outputs/*/seed*/metrics.json` (QAOA p = 4, ramp initia
 | scenario | C\* | C_rand | seed 0–4: E_Q range | seed 0–4: lift | min lift | enrichment range | QUBO regret |
 |---|---|---|---|---|---|---|---|
 | **R** (official public) | 72.0 | 151.25 | 89.21–89.42 | 0.7802–0.7829 | **0.7802** | 11.64–12.02 | 0 % |
-| **H** (official shared, run unmodified) | 234.0 | 300.28 | 242.83–243.28 | 0.8600–0.8668 | **0.8600** | 16.30–16.39 | 0.86 % |
+| **H** (official shared, run unmodified) | 234.0 | 300.28 | 242.83–243.28 | 0.8600–0.8668 | **0.8600** | 16.30–16.39 | 0.85 % |
 | heldout_1 (our own test) | 188.0 | 227.36 | 194.52–194.71 | 0.8296–0.8343 | 0.8296 | 12.99–13.05 | 0 % |
 | heldout_2 (our own test) | 277.5 | 318.22 | 285.30–285.50 | 0.8035–0.8085 | 0.8035 | 5.74–6.00 | 0 % |
 
@@ -93,7 +94,7 @@ All values are read from `outputs/*/seed*/metrics.json` (QAOA p = 4, ramp initia
 Per-seed values and the section-9 baselines (alternating, greedy, enumeration, random, QUBO minimiser, raw QAOA, labelled hybrid) are
 in `REPORT.md` section 4. Official costs of the baselines on H: best alternating 261.0, greedy 244.0, QUBO minimiser 236.0, optimum 234.0.
 
-Over 100 random scenarios (seed 0, `logs/generalisation.md`): lift mean 0.818, min 0.671, 10th percentile 0.748;
+Over 100 random scenarios (`scenario_gen` seed 7, pipeline seed 0, `logs/generalisation.md`): lift mean 0.818, min 0.671, 10th percentile 0.748;
 90 % of scenarios have QUBO regret ≤ 5 % (worst 32.6 %).
 
 ## File layout
@@ -115,3 +116,4 @@ Over 100 random scenarios (seed 0, `logs/generalisation.md`): lift mean 0.818, m
 | `research/` | Early numpy prototype used to compare QUBO surrogates and training variants. |
 | `CLAUDE.md`, `AI_USE_LOG.md`, `AI_DISCLOSURE.md` | Project brief and AI-use records. |
 | `REPORT.md` | Technical report (≤ 3 pages). |
+| `REPORT.pdf`, `AI_DISCLOSURE.pdf` | Typeset report (3 pages) and AI-use disclosure (1 page) for the submission. |

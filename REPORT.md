@@ -23,7 +23,7 @@ Two intersections A and B, four 30-second slots, eight bits x = (A1..A4, B1..B4)
 
 **Circuit.** Hadamards on all qubits, then p = 4 layers of RZ(2γ_k h_i/σ) on each qubit, RZZ(2γ_k J_ij/σ) on each coupled pair, and RX(2β_k) on each qubit; the written `circuit.qasm` (R, seed 0) has 8 H, 96 RZZ (24 coupled pairs × 4 layers), 32 RZ, 32 RX and 8 measurements, depth 46 with RZZ counted as one gate (the QASM defines it as CX–RZ–CX, i.e. 192 CX).
 
-**Initialisation and the sign of β.** Linear ramp γ_k = s_γ (k − ½)/p, β_k = s_β (1 − (k − ½)/p), with (s_γ, s_β) = (1.0, −0.4). The start state is the ground state of −ΣX and the mixer is RX(2β) = exp(−iβX), so an annealing-like path towards the *minimum* of the cost needs β of opposite sign to γ. **We first used (1.0, +0.4), which anneals towards the maximum: the starting normalised energy was +1.4 (random level 0), and COBYLA spent its budget recovering. We found this from `initial_objective` in `metrics.json` and fixed it late on 16 Oct;** the old ramp stays in the ablation table (section 5). Scale choices followed rules fixed before running: the original (0.6, 0.6) → (1.0, +0.4) needed a mean-lift gain ≥ 0.02 on 30 random scenarios (generator seed 2026) without lowering the minimum lift (it gave 0.734 → 0.773), and the sign flip (1.0, +0.4) → (1.0, −0.4) was judged by the same rule (0.773 → 0.820; minimum 0.642 → 0.698; mean initial objective +1.39 → −0.96). Neither R nor H was used for these choices.
+**Initialisation and the sign of β.** Linear ramp γ_k = s_γ (k − ½)/p, β_k = s_β (1 − (k − ½)/p), with (s_γ, s_β) = (1.0, −0.4). The start state is the ground state of −ΣX and the mixer is RX(2β) = exp(−iβX), so an annealing-like path towards the *minimum* of the cost needs β of opposite sign to γ. **We first used (1.0, +0.4), which anneals towards the maximum: the starting normalised energy was +1.4 (random level 0), and COBYLA spent its budget recovering. This was found in review from `initial_objective` in `metrics.json` (see the AI disclosure) and fixed late on 16 Oct;** the old ramp stays in the ablation table (section 5). Scale choices followed rules fixed before running: the original (0.6, 0.6) → (1.0, +0.4) needed a mean-lift gain ≥ 0.02 on 30 random scenarios (generator seed 2026) without lowering the minimum lift (it gave 0.734 → 0.773), and the sign flip (1.0, +0.4) → (1.0, −0.4) was judged by the same rule (0.773 → 0.820; minimum 0.642 → 0.698; mean initial objective +1.39 → −0.96). Neither R nor H was used for these choices.
 
 **Training.** COBYLA (scipy, `rhobeg` 0.2, `maxiter` 300) minimises the *exact* expectation of the normalised cost Hamiltonian from the statevector (no shots). Every objective call is counted and asserted ≤ 300; the runs use exactly 300 (R, seed 0: objective −0.96 → −1.40). Training is deterministic and does not depend on the seed; **the seed only sets the final sampler** (`StatevectorSampler(seed)`), 4,096 shots. Runtime is 1.28–1.39 s per seed on R (1.27–1.42 s on H) (laptop CPU, noiseless simulation).
 
@@ -49,7 +49,7 @@ Section-9 baselines (official cost; schedule in brackets):
 | (2) per-slot greedy | 92.5 (`01111001`) | 244.0 (`10100111`) |
 | (3) exact enumeration C\* | 72.0 (`11101010`) | 234.0 (`10000111`) |
 | (4) uniform-random mean | 151.25 | 300.28 |
-| (5) exact minimiser of our QUBO (surrogate ceiling) | 72.0 (`11101010`), regret 0 % | 236.0 (`10010110`), regret 0.86 % |
+| (5) exact minimiser of our QUBO (surrogate ceiling) | 72.0 (`11101010`), regret 0 % | 236.0 (`10010110`), regret 0.85 % |
 | (6) raw QAOA, mean of 4,096 samples (E_Q), 5 seeds | 89.21–89.42 | 242.83–243.28 |
 | (6) raw QAOA, lowest-QUBO-energy sample | 72.0 (`11101010`), all seeds | 236.0 (`10010110`), all seeds |
 | (6) raw QAOA, most frequent sample | 79.5 (`11111010`), all seeds | 235.0 (`10010111`), all seeds |
@@ -108,7 +108,7 @@ The sign fix is not uniformly better: heldout_2 got worse (min lift 0.844 → 0.
 
 - We shipped the wrong-sign ramp until a late review of `initial_objective`; a regression test now requires the starting energy to be below the random level. The ablations were rerun on the corrected ramp; the old-sign rows are kept separately.
 - COBYLA uses the whole 300-evaluation budget on every p = 4 run, so the angles are not converged.
-- The quadratic surrogate fails on some scenarios: regret up to 32.6 % (10 of 100 scenarios exceed 5 %); on H it costs 2.0 units (0.86 %) and caps the raw best sample at 236.0. Higher-order terms or auxiliary variables were not built.
+- The quadratic surrogate fails on some scenarios: regret up to 32.6 % (10 of 100 scenarios exceed 5 %); on H it costs 2.0 units (0.85 %) and caps the raw best sample at 236.0. Higher-order terms or auxiliary variables were not built.
 - The ramp choices were made sequentially on the same 30 scenarios, so part of the gain is likely selection noise; the independent 100-scenario set (0.782 → 0.818) and R (0.739 → 0.781 mean lift) point the same way, but heldout_2 worsened.
 - All results are noiseless statevector simulations; no noise model or hardware. Ablations used one sampler seed; mean-lift differences below about 0.02 should not be over-interpreted.
 - The hybrid result is reported separately and is not part of the raw counts. We make no quantum-advantage claim: there are only 256 candidate schedules.

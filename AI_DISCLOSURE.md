@@ -35,7 +35,7 @@ Claude (Claude app) noticed initial_objective = +1.45 in metrics.json during rev
   difference 1.9e-12).
 - **Tests (20, about 4 s):** bit mapping round trip, qubit order in a real circuit, `qubo.json` energies, counts sum to 4,096
   with 8-bit keys, circuit statevector vs counts (total variation within 1.5× pure shot noise), `circuit.qasm` equals the dump of the circuit
-  rebuilt from the saved angles, E_Q / lift / enrichment recomputed from `counts.json` and the scorer, ≤ 300 training evaluations, and the initial QAOA angles must start below the random energy level (added after a late sign error, see below).
+  rebuilt from the saved angles, E_Q / lift / enrichment recomputed from `counts.json` and the scorer, ≤ 300 training evaluations, and the initial QAOA angles must start below the random energy level (added after the late sign error, see section 3).
 - **Determinism:** the same seed gives byte-identical `counts.json` and `circuit.qasm` (tested); re-running
   `make_outputs.sh` changes only the `runtime_seconds` field of `metrics.json`.
 - **Report numbers** are produced by scripts into `outputs/` and `logs/`, not typed from memory.
