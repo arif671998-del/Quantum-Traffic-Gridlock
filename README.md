@@ -73,7 +73,7 @@ python official/scorer.py --scenario official/scenario_R.json --schedule outputs
 | QAOA depth p | 4 | 4 |
 | training objective evaluations | 300 | 300 |
 | final shots | 4,096 | exactly 4,096 |
-| runtime per seed | about 1.3 s (1.26–1.29 s on R, 1.26–1.27 s on H) | 10 min |
+| runtime per seed | about 1.3 s (1.28–1.39 s on R, 1.27–1.42 s on H) | 10 min |
 | determinism | same seed → byte-identical `counts.json` and `circuit.qasm` (tested) | required |
 | resources | CPU only, no network, well under 8 GB | CPU, 8 GB |
 
