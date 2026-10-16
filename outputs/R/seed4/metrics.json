@@ -81,7 +81,7 @@
     ],
     "sigma": 45.201588398528635
   },
-  "runtime_seconds": 1.2782386670005508,
+  "runtime_seconds": 1.2748469590005698,
   "versions": {
     "python": "3.13.9",
     "qiskit": "2.5.2",

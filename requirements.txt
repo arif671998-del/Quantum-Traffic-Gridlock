@@ -1,0 +1,4 @@
+# Exact tested versions: Python 3.13.9, qiskit 2.5.2, numpy 2.5.4, scipy 1.18.1 (macOS, CPU only); also in logs/versions.json
+qiskit>=2,<3
+numpy>=2.0
+scipy>=1.10

@@ -1,0 +1,7 @@
+{
+  "python": "3.13.9",
+  "platform": "macOS-26.3-arm64-arm-64bit-Mach-O",
+  "qiskit": "2.5.2",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1"
+}
