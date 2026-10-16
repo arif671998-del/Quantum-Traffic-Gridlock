@@ -18,11 +18,11 @@
     ],
     "official_cost": 72.0,
     "qubo_energy": 79.31249999999989,
-    "shots": 176
+    "shots": 264
   },
   "most_frequent": {
     "label": "raw QAOA: most frequent sample",
-    "bits": "11111000",
+    "bits": "11111010",
     "A": [
       1,
       1,
@@ -32,12 +32,12 @@
     "B": [
       1,
       0,
-      0,
+      1,
       0
     ],
-    "official_cost": 102.5,
-    "qubo_energy": 86.9375,
-    "shots": 485
+    "official_cost": 79.5,
+    "qubo_energy": 80.81249999999989,
+    "shots": 461
   },
   "hybrid": {
     "label": "hybrid (classical refinement, NOT raw QAOA): greedy 1-bit-flip descent on the QUBO starting from the primary schedule",
@@ -56,6 +56,6 @@
     ],
     "official_cost": 72.0,
     "qubo_energy": 79.31249999999989,
-    "shots": 176
+    "shots": 264
   }
 }

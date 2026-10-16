@@ -5,11 +5,11 @@
   "C_star": 72.0,
   "C_star_schedule": "11101010",
   "C_rand": 151.25,
-  "E_Q": 92.44921875,
-  "lift": 0.7419656940063092,
-  "lift_clipped": 0.7419656940063092,
-  "elite_fraction": 0.5205078125,
-  "elite_enrichment": 10.25,
+  "E_Q": 89.4173583984375,
+  "lift": 0.7802226069597792,
+  "lift_clipped": 0.7802226069597792,
+  "elite_fraction": 0.597412109375,
+  "elite_enrichment": 11.764423076923077,
   "elite_set": [
     "11101010",
     "11101100",
@@ -50,8 +50,8 @@
       "cost": 72.0
     },
     "qaoa_raw_most_frequent": {
-      "bits": "11111000",
-      "cost": 102.5
+      "bits": "11111010",
+      "cost": 79.5
     },
     "hybrid_refined (NOT raw QAOA)": {
       "bits": "11101010",
@@ -65,23 +65,23 @@
     "optimizer": "COBYLA (scipy), maxiter 300, rhobeg 0.2",
     "objective": "exact statevector expectation of the sigma-normalised cost Hamiltonian",
     "training_evaluations": 300,
-    "initial_objective": 1.4507171948220599,
-    "final_objective": -1.3433045112112993,
+    "initial_objective": -0.9621204819292517,
+    "final_objective": -1.3959423795534203,
     "gammas": [
-      0.16471864634256908,
-      0.2336891057595959,
-      0.5609045600653478,
-      2.2477292607155115
+      0.5868926935437119,
+      1.044874704959863,
+      1.2525739156053741,
+      1.6603285308145523
     ],
     "betas": [
-      0.2142325213463651,
-      0.31690290151122574,
-      -0.8648781281434001,
-      -0.3285139416913682
+      -0.6122858957445179,
+      -0.35328367251876924,
+      -0.1563406074239127,
+      -0.1661330219563723
     ],
     "sigma": 45.201588398528635
   },
-  "runtime_seconds": 1.265256207996572,
+  "runtime_seconds": 1.27621262500179,
   "versions": {
     "python": "3.13.9",
     "qiskit": "2.5.2",

@@ -1,0 +1,91 @@
+{
+  "scenario": "H",
+  "seed": 0,
+  "shots": 4096,
+  "C_star": 234.0,
+  "C_star_schedule": "10000111",
+  "C_rand": 300.28125,
+  "E_Q": 243.01611328125,
+  "lift": 0.8639718882602546,
+  "lift_clipped": 0.8639718882602546,
+  "elite_fraction": 0.82861328125,
+  "elite_enrichment": 16.317307692307693,
+  "elite_set": [
+    "10000111",
+    "10000110",
+    "10010111",
+    "10010110",
+    "10110111",
+    "10100111",
+    "10110110",
+    "10100110",
+    "10000100",
+    "00110111",
+    "10000101",
+    "10010100",
+    "00100111"
+  ],
+  "baselines": {
+    "alternating_best": {
+      "bits": "10100101",
+      "cost": 261.0
+    },
+    "greedy_per_slot": {
+      "bits": "10100111",
+      "cost": 244.0
+    },
+    "enumeration_optimum": {
+      "bits": "10000111",
+      "cost": 234.0
+    },
+    "uniform_random_mean": 300.28125,
+    "qubo_minimiser": {
+      "bits": "10010110",
+      "cost": 236.0,
+      "regret_percent_of_C_star": 0.8547008547008547,
+      "regret_percent_of_range": 3.0174446016030174
+    },
+    "qaoa_raw_best_sample": {
+      "bits": "10010110",
+      "cost": 236.0
+    },
+    "qaoa_raw_most_frequent": {
+      "bits": "10010111",
+      "cost": 235.0
+    },
+    "hybrid_refined (NOT raw QAOA)": {
+      "bits": "10010110",
+      "cost": 236.0
+    }
+  },
+  "qubo_cost_correlation": 0.9930515925918997,
+  "qaoa": {
+    "p": 4,
+    "n_qubits": 8,
+    "optimizer": "COBYLA (scipy), maxiter 300, rhobeg 0.2",
+    "objective": "exact statevector expectation of the sigma-normalised cost Hamiltonian",
+    "training_evaluations": 300,
+    "initial_objective": -0.9853166931060062,
+    "final_objective": -1.811204416826968,
+    "gammas": [
+      0.5230277372836919,
+      1.032840120311007,
+      1.0969145174041557,
+      1.3949192376112334
+    ],
+    "betas": [
+      -0.5582887863135546,
+      -0.4828259223416462,
+      -0.3840895129680153,
+      -0.2296001696067299
+    ],
+    "sigma": 32.059800538164254
+  },
+  "runtime_seconds": 1.2608368749934016,
+  "versions": {
+    "python": "3.13.9",
+    "qiskit": "2.5.2",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  }
+}

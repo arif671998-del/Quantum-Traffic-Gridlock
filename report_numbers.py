@@ -67,6 +67,11 @@ def main():
                                       "qubo_cost_correlation": R[0]["qubo_cost_correlation"],
                                       "gammas": R[0]["qaoa"]["gammas"], "betas": R[0]["qaoa"]["betas"],
                                       "initial_objective": R[0]["qaoa"]["initial_objective"], "final_objective": R[0]["qaoa"]["final_objective"]}}
+    Hm = seeds("H")
+    out["H"] = {"per_seed": table(Hm), "min_lift": min(m["lift"] for m in Hm), "mean_lift": float(np.mean([m["lift"] for m in Hm])),
+                "baselines_seed0": Hm[0]["baselines"], "C_star": Hm[0]["C_star"], "C_rand": Hm[0]["C_rand"],
+                "qubo_cost_correlation": Hm[0]["qubo_cost_correlation"], "initial_objective": Hm[0]["qaoa"]["initial_objective"],
+                "final_objective": Hm[0]["qaoa"]["final_objective"]}
     for n in (1, 2):
         ms = seeds(f"heldout_{n}")
         out[f"heldout_{n}"] = {"per_seed": table(ms), "min_lift": min(m["lift"] for m in ms), "C_star": ms[0]["C_star"], "C_rand": ms[0]["C_rand"],
@@ -88,7 +93,7 @@ def main():
     out["versions"] = load("logs/versions.json")
     (ROOT / "logs" / "report_numbers.json").write_text(json.dumps(out, indent=1))
     print(json.dumps({k: out[k] for k in ("verification", "circuit_R_seed0")}, indent=1))
-    print(json.dumps(out["R"], indent=1))
+    print(json.dumps({k: out["R"][k] for k in ("min_lift", "mean_lift", "initial_objective", "final_objective")}, indent=1))
     print(json.dumps({k: out[k] for k in ("heldout_1", "heldout_2")}, indent=1)[:3500])
     print(json.dumps(out["generalisation"], indent=1))
 
