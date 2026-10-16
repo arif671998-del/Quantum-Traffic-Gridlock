@@ -75,10 +75,16 @@ def energy_table(h, J, sigma):
     return e
 
 
-def initial_angles(p=P, gamma_scale=1.0, beta_scale=0.4):
-    """Linear ramp: gamma_k = gamma_scale (k-0.5)/p rising, beta_k = beta_scale (1-(k-0.5)/p) falling, k=1..p.
-    Default scales 1.0 / 0.4: chosen by the pre-registered rule in ablations.py (30 random scenarios, never R or H);
-    the original 0.6 / 0.6 is kept as the ablation baseline."""
+def initial_angles(p=P, gamma_scale=1.0, beta_scale=-0.4):
+    """Linear ramp (annealing-like start): gamma_k = gamma_scale (k-0.5)/p rising, beta_k = beta_scale (1-(k-0.5)/p) falling.
+
+    Why beta is NEGATIVE: the start state |+...+> is the ground state of -sum X, and the mixer RX(2 beta) = exp(-i beta X).
+    Following the adiabatic path towards the MINIMUM of the cost needs the mixer and cost phases to have opposite sign,
+    so gamma > 0 goes with beta < 0. With both positive the ramp heads towards the MAXIMUM (initial normalised energy
+    about +1.4 instead of -1.0) and COBYLA spends its 300 evaluations recovering. We first used (1.0, +0.4), found the
+    problem from initial_objective > 0 in metrics.json, and fixed it with the same magnitudes and corrected sign;
+    the change was accepted by the pre-set rule in ablations.py (30 random scenarios only, never R or H).
+    """
     k = np.arange(1, p + 1)
     return gamma_scale * (k - 0.5) / p, beta_scale * (1 - (k - 0.5) / p)
 

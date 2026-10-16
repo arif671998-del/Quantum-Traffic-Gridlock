@@ -6,7 +6,7 @@ Every configuration is run on R and on 30 random scenarios (scenario_gen, seed 2
 30 random scenarios (never from R or H). Each run: train (<= 300 evaluations), bind, sample 4,096 shots with seed 0,
 score with the official scorer.  Scenarios with C_rand - C* < 1.0 are excluded from lift statistics (ratio unstable).
 
-Decision rule (fixed before running): change the initial-default ramp scale (0.6, 0.6) only if another ramp-scale setting
+Decision rule 1 (fixed before the first run): change the initial-default ramp scale (0.6, 0.6) only if another ramp-scale setting
 raises the mean lift on the 30 random scenarios by >= 0.02 WITHOUT lowering the minimum lift; otherwise keep it.
 """
 import json
@@ -37,6 +37,9 @@ def configs():
         for b in BETA_SCALES:
             if (g, b) != (0.6, 0.6):
                 c[f"init ramp gamma {g} / beta {b}"] = dict(group="scale", p=4, init=("ramp", g, b), degree=2, cvar=None)
+    # Added after the first study (16 Oct, ~17:45): same magnitudes as the adopted (1.0, 0.4) but beta negative, because
+    # RX(2 beta) = exp(-i beta X) needs the opposite sign to gamma to start an annealing-like ramp on the low-energy side.
+    c["init ramp gamma 1.0 / beta -0.4 (sign-corrected)"] = dict(group="sign", p=4, init=("ramp", 1.0, -0.4), degree=2, cvar=None)
     c["surrogate degree 1 (linear only)"] = dict(group="surrogate", p=4, init=("ramp", 0.6, 0.6), degree=1, cvar=None)
     c["objective CVaR 0.25"] = dict(group="objective", p=4, init=("ramp", 0.6, 0.6), degree=2, cvar=0.25)
     return c
@@ -59,6 +62,7 @@ def run_one(sc, allc, cfg):
     counts, _ = qaoa.sample(qaoa.bound_circuit(h, J, sigma, tr["gammas"], tr["betas"]), 0)
     m = q(counts, allc)
     return {"lift": m["lift"], "enrichment": m["elite_enrichment"], "E_Q": m["E_Q"], "evals": tr["evaluations"],
+            "initial_objective": tr["initial_objective"],
             "regret_pct": 100.0 * (allc[qmin] - m["C_star"]) / m["C_star"]}
 
 
@@ -78,6 +82,7 @@ def summarise(rows, name):
     return {"n": len(ok), "lift_mean": float(lifts.mean()), "lift_min": float(lifts.min()),
             "enrichment_mean": float(np.mean([r["enrichment"] for r in ok])),
             "regret_mean_pct": float(reg.mean()), "regret_share_le_5pct": float((reg <= 5).mean()),
+            "initial_objective_mean": float(np.mean([r["initial_objective"] for r in ok])),
             "evals_max": int(max(r["evals"] for r in ok))}
 
 
@@ -101,6 +106,15 @@ def main():
                 "baseline_mean_lift": base["lift_mean"], "baseline_min_lift": base["lift_min"],
                 "qualifying": list(qualifying), "chosen": best or "keep 0.6/0.6"}
 
+    # ---- second decision (same rule), sign-corrected ramp versus the adopted (1.0, +0.4), random scenarios only ----
+    cur = summary["init ramp gamma 1.0 / beta 0.4"]["random30"]
+    new = summary["init ramp gamma 1.0 / beta -0.4 (sign-corrected)"]["random30"]
+    passes = new["lift_mean"] >= cur["lift_mean"] + 0.02 and new["lift_min"] >= cur["lift_min"]
+    decision["second_rule_sign_correction"] = {
+        "rule": "same rule: adopt (1.0, -0.4) only if mean lift rises >= 0.02 over the current default (1.0, 0.4) and min lift does not fall",
+        "current_default_mean_lift": cur["lift_mean"], "current_default_min_lift": cur["lift_min"],
+        "candidate_mean_lift": new["lift_mean"], "candidate_min_lift": new["lift_min"], "passes": bool(passes)}
+
     out = {"random_scenarios": {"generator_seed": 2026, "count": 30,
                                 "excluded_for_small_denominator": [r["name"] for r in rand_rows if r["denominator"] < MIN_DENOM]},
            "summary": summary, "decision": decision, "per_scenario": rows}
@@ -112,19 +126,22 @@ def main():
          f"30 random scenarios (seed 2026; {out['random_scenarios']['excluded_for_small_denominator'] or 'none'} excluded for "
          f"C_rand - C* < {MIN_DENOM}) + scenario R. Lift/enrichment from 4,096 sampled shots, seed 0. Regret = (official cost of "
          "the QUBO minimiser - C*) / C* in %.", ""]
-    head = "| setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | R lift | R enrichment |\n|---|---|---|---|---|---|---|---|---|"
+    head = "| setting | mean lift | min lift | mean enrichment | mean regret % | share regret <= 5% | max evals | mean initial objective | R lift | R enrichment |\n|---|---|---|---|---|---|---|---|---|---|"
     for title, groups in [("Depth", ("baseline", "depth")), ("Initialisation (random angles)", ("baseline", "init")),
-                          ("Initialisation (ramp scales)", ("baseline", "scale")), ("Surrogate degree", ("baseline", "surrogate")),
+                          ("Initialisation (ramp scales)", ("baseline", "scale")), ("Ramp sign (added later)", ("baseline", "sign")), ("Surrogate degree", ("baseline", "surrogate")),
                           ("Objective", ("baseline", "objective"))]:
         L += [f"## {title}", "", head]
         for n, s in summary.items():
-            if s["group"] in groups:
+            if s["group"] in groups or (title.startswith("Ramp sign") and n == "init ramp gamma 1.0 / beta 0.4"):
                 a, r = s["random30"], s["R"]
                 L.append(f"| {n} | {a['lift_mean']:.3f} | {a['lift_min']:.3f} | {a['enrichment_mean']:.2f} | {a['regret_mean_pct']:.2f} | "
-                         f"{a['regret_share_le_5pct']:.2f} | {a['evals_max']} | {r['lift']:.3f} | {r['enrichment']:.2f} |")
+                         f"{a['regret_share_le_5pct']:.2f} | {a['evals_max']} | {a['initial_objective_mean']:.2f} | {r['lift']:.3f} | {r['enrichment']:.2f} |")
         L.append("")
     L += ["## Decision", "", f"Rule: {decision['rule']}.", f"Baseline (initial default): mean {decision['baseline_mean_lift']:.3f}, min {decision['baseline_min_lift']:.3f}.",
-          f"Qualifying settings: {decision['qualifying'] or 'none'}.  **Chosen: {decision['chosen']}.**", ""]
+          f"Qualifying settings: {decision['qualifying'] or 'none'}.  **Chosen: {decision['chosen']}.**", "",
+          "### Second decision: sign correction", "", f"Rule: {decision['second_rule_sign_correction']['rule']}.",
+          f"Current default (1.0, 0.4): mean {cur['lift_mean']:.3f}, min {cur['lift_min']:.3f}. Candidate (1.0, -0.4): mean {new['lift_mean']:.3f}, "
+          f"min {new['lift_min']:.3f}. **Passes: {passes}.**", ""]
     (ROOT / "logs" / "ablations.md").write_text("\n".join(L))
     print("\n".join(L))
 

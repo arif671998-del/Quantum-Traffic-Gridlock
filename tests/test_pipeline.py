@@ -136,6 +136,21 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(qasm3.dumps(qc), (self.d0 / "circuit.qasm").read_text())
 
     # ---- budget, determinism, limits -------------------------------------------------------
+    def test_initial_ramp_starts_below_random_level(self):
+        """The starting angles must already beat a uniformly random state (normalised energy < 0) on R.
+        A wrong-sign ramp (beta of the same sign as gamma) starts at about +1.4 and fails this test."""
+        q = load(self.d0, "qubo.json")
+        h, J, sigma = np.array(q["ising"]["h"]), np.array(q["ising"]["J"]), q["ising"]["sigma"]
+        g, b = qaoa.initial_angles()
+        probs = np.abs(Statevector(qaoa.bound_circuit(h, J, sigma, g, b)).data) ** 2
+        e0 = float(probs @ qaoa.energy_table(h, J, sigma))
+        self.assertLess(e0, 0.0)
+        self.assertAlmostEqual(e0, load(self.d0, "metrics.json")["qaoa"]["initial_objective"], places=9)
+        self.assertLess(float(np.mean(qaoa.energy_table(h, J, sigma))), 1e-9)      # random level is 0
+        wrong = qaoa.initial_angles(beta_scale=0.4)                                 # the old, wrong-sign ramp
+        pw = np.abs(Statevector(qaoa.bound_circuit(h, J, sigma, *wrong)).data) ** 2
+        self.assertGreater(float(pw @ qaoa.energy_table(h, J, sigma)), 0.0)
+
     def test_training_budget(self):
         m = load(self.d0, "metrics.json")
         self.assertLessEqual(m["qaoa"]["training_evaluations"], 300)
