@@ -19,7 +19,7 @@ No other AI tool was used. Libraries used (permitted): Qiskit, NumPy, SciPy.
   rises by ≥ 0.02 without lowering the minimum lift; R and H are never used to choose settings).
 - Ran every test and experiment on our own machine and looked at the outputs.
 - Checked the generated schedules with the official `scorer.py`.
-- Followed the organisers' Discord announcements about scenario H (not released by submission time).
+- Followed the organisers' Discord announcements about scenario H (released late, about 17:40 IST on 16 Oct), reviewed `metrics.json` and spotted that the initial objective was above the random level, which led to the sign correction of the mixer angle (Claude Code then measured it with the pre-set rule, implemented it and reran everything).
 - Reviewed the report against the logs before submission.
 
 ## 3. How results were verified independently of the AI-written code
@@ -29,9 +29,9 @@ No other AI tool was used. Libraries used (permitted): Qiskit, NumPy, SciPy.
 - **Model check:** our queue recursion equals the scorer on 7,936 evaluations (R and 30 random scenarios × 256 schedules, 0 mismatches,
   `logs/verification.json`); the QUBO equals the global least-squares quadratic fit of the official cost (maximum
   difference 1.9e-12).
-- **Tests (19, about 4 s):** bit mapping round trip, qubit order in a real circuit, `qubo.json` energies, counts sum to 4,096
+- **Tests (20, about 4 s):** bit mapping round trip, qubit order in a real circuit, `qubo.json` energies, counts sum to 4,096
   with 8-bit keys, circuit statevector vs counts (total variation within 1.5× pure shot noise), `circuit.qasm` equals the dump of the circuit
-  rebuilt from the saved angles, E_Q / lift / enrichment recomputed from `counts.json` and the scorer, ≤ 300 training evaluations.
+  rebuilt from the saved angles, E_Q / lift / enrichment recomputed from `counts.json` and the scorer, ≤ 300 training evaluations, and the initial QAOA angles must start below the random energy level (added after a late sign error, see below).
 - **Determinism:** the same seed gives byte-identical `counts.json` and `circuit.qasm` (tested); re-running
   `make_outputs.sh` changes only the `runtime_seconds` field of `metrics.json`.
 - **Report numbers** are produced by scripts into `outputs/` and `logs/`, not typed from memory.
@@ -46,6 +46,6 @@ No other AI tool was used. Libraries used (permitted): Qiskit, NumPy, SciPy.
 - Nothing is hard-coded for scenario R. R, H and our own held-out scenarios are not used to choose settings (the ramp scale was chosen
   on 30 random scenarios).
 - Classical refinement appears only as a separately labelled "hybrid" result, never in the raw QAOA counts.
-- Files in `official/` are unmodified. Scenario H had not been released when we submitted; none of our results are on H.
-- Known weaknesses (training hits the 300-evaluation cap, surrogate regret up to 32.6 % on some scenarios, selection noise in
+- Files in `official/` are unmodified. Scenario H was run unmodified after all settings were fixed; no setting was chosen on R or H.
+- Known weaknesses (a wrong-sign mixer angle shipped until a late review and is now fixed, training hits the 300-evaluation cap, surrogate regret up to 32.6 % on some scenarios, selection noise in
   the ramp choice) are stated in `REPORT.md` section 7.

@@ -9,10 +9,9 @@ distribution (4,096 shots). The QUBO is never built from the optimal schedule; e
 for benchmarks (C\*, C_rand, elite set). The full derivation, benchmarks and limitations are in [`REPORT.md`](REPORT.md);
 AI assistance is declared in [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md).
 
-> **Scenario H:** the organisers had not released scenario H by submission time (Discord #doubts, 16 Oct 2026,
-> 15:54-16:45 IST). The pipeline runs on it unchanged:
-> `python run.py --scenario official/scenario_H.json --seed N --out outputs/H/seedN`
-> (`make_outputs.sh` does this automatically if the file exists).
+> **Scenario H:** the organisers released scenario H late (about 17:40 IST on 16 Oct 2026, Discord #doubts). The
+> pipeline ran on it unchanged: `python run.py --scenario official/scenario_H.json --seed N --out outputs/H/seedN`
+> (`make_outputs.sh` does this automatically). Results for H are in the table below and in `REPORT.md` section 4.
 
 ## Install
 
@@ -60,9 +59,9 @@ python official/scorer.py --scenario official/scenario_R.json --schedule outputs
 
 | command | what it does |
 |---|---|
-| `bash make_outputs.sh` | Regenerates `outputs/R/seed0..4` (and `outputs/H/seed0..4` if `official/scenario_H.json` exists) and `logs/versions.json`. |
-| `python -m unittest discover -s tests` | 19 tests (about 4 s): scorer reference vectors, our recursion = scorer, QUBO = best quadratic fit, bit-mapping round trip, counts sum 4,096, circuit vs counts, ≤ 300 evaluations, same seed → identical counts. |
-| `python ablations.py` | Depth / initialisation / surrogate degree / objective on R and 30 random scenarios → `logs/ablations.{json,md}` (about 3 min). |
+| `bash make_outputs.sh` | Regenerates `outputs/R/seed0..4` and `outputs/H/seed0..4` (H only if `official/scenario_H.json` exists) and `logs/versions.json`. |
+| `python -m unittest discover -s tests` | 20 tests (about 4 s): scorer reference vectors, our recursion = scorer, QUBO = best quadratic fit, bit-mapping round trip, counts sum 4,096, circuit vs counts, ≤ 300 evaluations, initial angles better than random, same seed → identical counts. |
+| `python ablations.py` | Depth / initialisation / surrogate degree / objective on R and 30 random scenarios → `logs/ablations.{json,md}` (about 3.5 min). |
 | `python generalisation.py` | 100 random scenarios through the same pipeline function → `logs/generalisation.{json,md}`. |
 | `python report_numbers.py` | Re-checks recursion = scorer on 7,936 evaluations and collects the numbers quoted in the report → `logs/verification.json`, `logs/report_numbers.json`. |
 
@@ -74,33 +73,27 @@ python official/scorer.py --scenario official/scenario_R.json --schedule outputs
 | QAOA depth p | 4 | 4 |
 | training objective evaluations | 300 | 300 |
 | final shots | 4,096 | exactly 4,096 |
-| runtime per seed | about 1.3 s (1.27–1.30 s on R) | 10 min |
+| runtime per seed | about 1.3 s (1.26–1.29 s on R, 1.26–1.27 s on H) | 10 min |
 | determinism | same seed → byte-identical `counts.json` and `circuit.qasm` (tested) | required |
 | resources | CPU only, no network, well under 8 GB | CPU, 8 GB |
 
 ## Results summary
 
-Scenario R, seeds 0–4 (values from `outputs/R/seed*/metrics.json`; C\* = 72.0, C_rand = 151.25):
+All values are read from `outputs/*/seed*/metrics.json` (QAOA p = 4, ramp initialisation γ scale 1.0, β scale −0.4; see `REPORT.md` section 3 for why β is negative).
 
-| seed | E_Q | lift | elite enrichment |
-|---|---|---|---|
-| 0 | 92.62 | 0.7398 | 10.19 |
-| 1 | 92.47 | 0.7417 | 10.34 |
-| 2 | 92.45 | 0.7420 | 10.25 |
-| 3 | 93.06 | 0.7343 | 10.22 |
-| 4 | 92.74 | 0.7383 | 10.34 |
+| scenario | C\* | C_rand | seed 0–4: E_Q range | seed 0–4: lift | min lift | enrichment range | QUBO regret |
+|---|---|---|---|---|---|---|---|
+| **R** (official public) | 72.0 | 151.25 | 89.21–89.42 | 0.7802–0.7829 | **0.7802** | 11.64–12.02 | 0 % |
+| **H** (official shared, run unmodified) | 234.0 | 300.28 | 242.83–243.28 | 0.8600–0.8668 | **0.8600** | 16.30–16.39 | 0.86 % |
+| heldout_1 (our own test) | 188.0 | 227.36 | 194.52–194.71 | 0.8296–0.8343 | 0.8296 | 12.99–13.05 | 0 % |
+| heldout_2 (our own test) | 277.5 | 318.22 | 285.30–285.50 | 0.8035–0.8085 | 0.8035 | 5.74–6.00 | 0 % |
 
-**Minimum lift on R: 0.7343.** The QUBO minimiser (`11101010`) has official cost 72.0 = C\* (regret 0 %).
+`heldout_1/2` are random scenarios we generated (`scenarios/`, `scenario_gen` seed 99); they are **not** the official H.
 
-Our own held-out test scenarios (random, `scenarios/heldout_1.json`, `heldout_2.json`; **not** the official H),
-seeds 0–4 (`outputs/heldout_*/seed*/metrics.json`):
+Per-seed values and the section-9 baselines (alternating, greedy, enumeration, random, QUBO minimiser, raw QAOA, labelled hybrid) are
+in `REPORT.md` section 4. Official costs of the baselines on H: best alternating 261.0, greedy 244.0, QUBO minimiser 236.0, optimum 234.0.
 
-| scenario | C\* | C_rand | QUBO regret | min lift over 5 seeds | enrichment range |
-|---|---|---|---|---|---|
-| heldout_1 | 188.0 | 227.36 | 0 % | 0.8079 | 11.61–11.95 |
-| heldout_2 | 277.5 | 318.22 | 0 % | 0.8442 | 8.21–8.42 |
-
-Over 100 random scenarios (seed 0, `logs/generalisation.md`): lift mean 0.782, min 0.607, 10th percentile 0.698;
+Over 100 random scenarios (seed 0, `logs/generalisation.md`): lift mean 0.818, min 0.671, 10th percentile 0.748;
 90 % of scenarios have QUBO regret ≤ 5 % (worst 32.6 %).
 
 ## File layout
@@ -115,9 +108,9 @@ Over 100 random scenarios (seed 0, `logs/generalisation.md`): lift mean 0.782, m
 | `ablations.py`, `generalisation.py`, `report_numbers.py` | Experiments and number collection. |
 | `make_outputs.sh`, `requirements.txt` | Reproducibility. |
 | `tests/` | `test_qubo.py`, `test_pipeline.py`. |
-| `official/` | Organisers' `scorer.py`, `scenario_R.json`, README (unmodified). |
+| `official/` | Organisers' `scorer.py`, `scenario_R.json`, `scenario_H.json`, README (unmodified). |
 | `scenarios/` | Our two held-out test scenarios. |
-| `outputs/R/seed0..4`, `outputs/heldout_1/`, `outputs/heldout_2/` | Generated outputs (`outputs/H/` is created when H exists). |
+| `outputs/R/seed0..4`, `outputs/H/seed0..4`, `outputs/heldout_1/`, `outputs/heldout_2/` | Generated outputs. |
 | `logs/` | `ablations`, `generalisation`, `verification`, `report_numbers`, `versions`. |
 | `research/` | Early numpy prototype used to compare QUBO surrogates and training variants. |
 | `CLAUDE.md`, `AI_USE_LOG.md`, `AI_DISCLOSURE.md` | Project brief and AI-use records. |

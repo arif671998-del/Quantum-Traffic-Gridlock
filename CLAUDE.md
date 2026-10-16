@@ -60,7 +60,7 @@ approximation (degree-2 Walsh–Fourier truncation over its window); the switchi
   the uniform distribution, which is analytic for an Ising form: sigma = sqrt(sum h_i² + sum_{i<j} J_ij²).
   Layer k: RZ(2·γ_k·h_i/σ) on each qubit, RZZ(2·γ_k·J_ij/σ) on each pair with J_ij ≠ 0, then RX(2·β_k) on each qubit.
   Start from H on all qubits.
-- p = 4. Initial angles: linear ramp γ_k = 1.0·(k − 0.5)/p, β_k = 0.4·(1 − (k − 0.5)/p), k = 1..p (scales 1.0/0.4 chosen on 30 random scenarios by the pre-registered rule in `ablations.py`, 16 Oct; originally 0.6/0.6).
+- p = 4. Initial angles: linear ramp γ_k = 1.0·(k − 0.5)/p, β_k = −0.4·(1 − (k − 0.5)/p), k = 1..p. β is NEGATIVE (mixer RX(2β) needs the opposite sign to γ to anneal towards the minimum); scales chosen on 30 random scenarios by the pre-registered rules in `ablations.py` (16 Oct; history 0.6/0.6 → 1.0/+0.4 → 1.0/−0.4).
 - Training objective: exact expectation of the normalised cost Hamiltonian from the statevector (no shots),
   COBYLA (scipy) with maxiter 300, rhobeg 0.2; count every objective call and assert ≤ 300.
   Training does not depend on the seed (so worst-seed lift is stable); the seed only sets the final sampler.
@@ -100,10 +100,10 @@ circuit consistency (statevector of the bound circuit vs counts, e.g. total vari
 
 ## Status
 - [x] Traffic recursion + QUBO builder (`traffic_qubo.py`) verified in a numpy prototype (see `research/`)
-- [x] Tests (`.venv/bin/python -m unittest discover -s tests`, 19 tests, ~4 s; unittest because pytest is not installed)
+- [x] Tests (`.venv/bin/python -m unittest discover -s tests`, 20 tests, ~4 s; unittest because pytest is not installed)
 - [x] QAOA + run.py with the four required outputs (`qaoa.py`, `run.py`)
 - [x] Baselines + metrics.json (`baselines.py`)
-- [x] Runs on R, seeds 0-4 (`outputs/R/seed0..4`); [ ] H when released (~15:30): `python run.py --scenario <H.json> --seed S --out outputs/H/seedS`
+- [x] Runs on R, seeds 0-4 (`outputs/R/seed0..4`); [x] H (released ~17:40, `outputs/H/seed0..4`); ramp sign corrected to (1.0, −0.4)
 - [x] Ablations (`ablations.py` -> `logs/ablations.md`; ramp scale changed to 1.0/0.4 by the pre-set rule)
 - [x] Generalisation study (`generalisation.py` -> `logs/generalisation.md`)
 - [ ] README, report ≤ 3 pages, AI disclosure, tag
